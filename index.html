@@ -6,6 +6,10 @@
   <title>Know Yourself: From Lost to Life Blueprint | Complete Book & 90-Day Workbook</title>
   <meta name="description" content="Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.">
   
+  <!-- Preconnect and Resource Hints -->
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://payhip.com">
+
   <!-- Compatibility guard for third-party trackers in sandboxed environments -->
   <script>
     (function() {
@@ -91,7 +95,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    img, svg {
+    img, svg, picture {
       display: block;
       max-width: 100%;
     }
@@ -145,6 +149,26 @@
       background-color: var(--bg-soft);
       border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
+    }
+
+    /* CSS PERFORMANCE OPTIMIZATIONS */
+    #problem,
+    #whats-inside,
+    #bonus,
+    #timeline,
+    #preview-mockups,
+    #testimonials,
+    #guarantee,
+    #pricing,
+    #faq,
+    #final-cta {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 700px;
+    }
+
+    /* IMAGE LOAD ERROR GRACEFUL FALLBACK */
+    .img-load-error {
+      display: none !important;
     }
 
     /* 1. TRUST BAR */
@@ -277,8 +301,9 @@
       overflow: hidden;
       box-shadow: 0 16px 36px rgba(21, 34, 56, 0.16);
       border: 1px solid var(--border-color);
-      background: #ffffff;
+      background: var(--bg-soft);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
     .hero-cover-wrap:hover {
       transform: translateY(-4px);
@@ -288,7 +313,8 @@
       width: 100%;
       height: auto;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: var(--bg-soft);
     }
     .hero-product-preview {
       width: 100%;
@@ -466,14 +492,16 @@
       overflow: hidden;
       border: 1px solid var(--border-color);
       box-shadow: var(--shadow-md);
-      background: #ffffff;
+      background: var(--bg-soft);
+      position: relative;
     }
     .inside-bundle-img {
       width: 100%;
       height: auto;
-      max-height: 360px;
-      object-fit: cover;
+      max-height: 380px;
+      object-fit: contain;
       display: block;
+      background-color: var(--bg-soft);
     }
 
     /* 5. BONUS SECTION */
@@ -670,13 +698,14 @@
     .mockup-thumbnail-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
+      background-color: var(--bg-soft);
       transition: transform 0.35s ease;
     }
     .mockup-img-btn:hover .mockup-thumbnail-img,
     .mockup-img-btn:focus-visible .mockup-thumbnail-img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
     .mockup-zoom-overlay {
       position: absolute;
@@ -693,6 +722,7 @@
       font-weight: 700;
       opacity: 0;
       transition: opacity 0.2s ease;
+      pointer-events: none;
     }
     .mockup-img-btn:hover .mockup-zoom-overlay,
     .mockup-img-btn:focus-visible .mockup-zoom-overlay {
@@ -865,8 +895,9 @@
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(21, 34, 56, 0.12);
       border: 2px solid #f2dfa8;
-      background: #ffffff;
+      background: var(--bg-soft);
       transition: transform 0.2s ease;
+      position: relative;
     }
     .pricing-cover-thumb-wrap:hover {
       transform: scale(1.04);
@@ -874,8 +905,9 @@
     .pricing-cover-thumb {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
+      background-color: var(--bg-soft);
     }
     .price-display {
       display: flex;
@@ -1283,6 +1315,7 @@
       object-fit: contain;
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-sm);
+      background-color: var(--bg-soft);
     }
     .lightbox-caption {
       width: 100%;
@@ -1404,7 +1437,10 @@
           <!-- Right: Visual Cover Mockup & Package Summary -->
           <div class="hero-media-wrapper">
             <div class="hero-cover-wrap" id="hero-cover-card">
-              <img src="images/cover.png" alt="Know Yourself complete book and 90-day workbook digital package by Azddine" class="hero-cover-img" width="460" height="460">
+              <picture class="hero-cover-picture">
+                <source type="image/webp" srcset="images/cover-480.webp 480w, images/cover-800.webp 800w, images/cover-1200.webp 1200w" sizes="(max-width: 640px) 90vw, (max-width: 960px) 460px, 460px">
+                <img src="images/cover.jpg" alt="Know Yourself complete theoretical book and 90-day workbook digital package cover by Azddine" class="hero-cover-img" width="460" height="460" fetchpriority="high" decoding="async">
+              </picture>
             </div>
 
             <div class="hero-product-preview" id="hero-book-preview">
@@ -1545,7 +1581,10 @@
 
         <!-- Inside System Visual Overview -->
         <div class="inside-visual-banner" id="inside-visual-showcase">
-          <img src="images/inside-bundle.png" alt="Inside the complete theoretical book and practical workbook system of Know Yourself" loading="lazy" class="inside-bundle-img" width="1040" height="360">
+          <picture class="inside-picture">
+            <source type="image/webp" srcset="images/inside-bundle-480.webp 480w, images/inside-bundle-800.webp 800w, images/inside-bundle-1200.webp 1200w" sizes="(max-width: 640px) 95vw, (max-width: 1040px) 90vw, 1040px">
+            <img src="images/inside-bundle.jpg" alt="Inside the complete theoretical book and practical workbook system of Know Yourself" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="380">
+          </picture>
         </div>
       </div>
     </section>
@@ -1669,9 +1708,12 @@
               <span class="mockup-type">Worksheet 01</span>
               <h3>Life Audit Across 8 Domains</h3>
             </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-life-audit.png" data-caption="Worksheet 01: 8-Domain Life Audit with visual scoring wheel and evaluation criteria for Career, Health, Finance, and Relationships." aria-label="Open full preview of 8-Domain Life Audit worksheet">
+            <button type="button" class="mockup-img-btn" data-full-img="images/life-audit-1200.webp" data-caption="Worksheet 01: 8-Domain Life Audit with visual scoring wheel and evaluation criteria for Career, Health, Finance, and Relationships." aria-label="Open full preview of 8-Domain Life Audit worksheet">
               <div class="mockup-img-wrap">
-                <img src="images/workbook-life-audit.png" alt="Life Audit across 8 life domains worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <picture class="mockup-picture">
+                  <source type="image/webp" srcset="images/life-audit-480.webp 480w, images/life-audit-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
+                  <img src="images/life-audit.jpg" alt="Life Audit across 8 life domains worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
                 </div>
@@ -1686,9 +1728,12 @@
               <span class="mockup-type">Worksheet 02</span>
               <h3>Core Values & Strengths Mapping</h3>
             </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-core-values.png" data-caption="Worksheet 02: Core Values & Strengths Mapping with 50+ value elimination matrix and top 5 priority pillars." aria-label="Open full preview of Core Values & Strengths Mapping worksheet">
+            <button type="button" class="mockup-img-btn" data-full-img="images/core-values-1200.webp" data-caption="Worksheet 02: Core Values & Strengths Mapping with 50+ value elimination matrix and top 5 priority pillars." aria-label="Open full preview of Core Values & Strengths Mapping worksheet">
               <div class="mockup-img-wrap">
-                <img src="images/workbook-core-values.png" alt="Core Values and Strengths Mapping worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <picture class="mockup-picture">
+                  <source type="image/webp" srcset="images/core-values-480.webp 480w, images/core-values-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
+                  <img src="images/core-values.jpg" alt="Core Values and Strengths Mapping worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
                 </div>
@@ -1703,9 +1748,12 @@
               <span class="mockup-type">Worksheet 03</span>
               <h3>Clarity Decision Matrix</h3>
             </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-decision-matrix.png" data-caption="Worksheet 03: Clarity Decision Matrix with weighted scoring system to test options against core values and 5-year upside." aria-label="Open full preview of Clarity Decision Matrix worksheet">
+            <button type="button" class="mockup-img-btn" data-full-img="images/decision-matrix-1200.webp" data-caption="Worksheet 03: Clarity Decision Matrix with weighted scoring system to test options against core values and 5-year upside." aria-label="Open full preview of Clarity Decision Matrix worksheet">
               <div class="mockup-img-wrap">
-                <img src="images/workbook-decision-matrix.png" alt="Clarity Decision Matrix weighted evaluation framework preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <picture class="mockup-picture">
+                  <source type="image/webp" srcset="images/decision-matrix-480.webp 480w, images/decision-matrix-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
+                  <img src="images/decision-matrix.jpg" alt="Clarity Decision Matrix weighted evaluation framework preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
                 </div>
@@ -1720,9 +1768,12 @@
               <span class="mockup-type">Worksheet 04</span>
               <h3>90-Day Action Plan & Habit Log</h3>
             </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-90-day-plan.png" data-caption="Worksheet 04: 90-Day Action Plan & Habit Tracker with 13-week execution sprints and daily micro-habit consistency tracking." aria-label="Open full preview of 90-Day Action Plan & Habit Log worksheet">
+            <button type="button" class="mockup-img-btn" data-full-img="images/ninety-day-plan-1200.webp" data-caption="Worksheet 04: 90-Day Action Plan & Habit Tracker with 13-week execution sprints and daily micro-habit consistency tracking." aria-label="Open full preview of 90-Day Action Plan & Habit Log worksheet">
               <div class="mockup-img-wrap">
-                <img src="images/workbook-90-day-plan.png" alt="90-Day Action Plan and Habit Tracker worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <picture class="mockup-picture">
+                  <source type="image/webp" srcset="images/ninety-day-plan-480.webp 480w, images/ninety-day-plan-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
+                  <img src="images/ninety-day-plan.jpg" alt="90-Day Action Plan and Habit Tracker worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
                 </div>
@@ -1808,7 +1859,10 @@
           <p class="pricing-subtitle">Everything you need to go from feeling lost to holding a clear 90-day plan.</p>
           
           <div class="pricing-cover-thumb-wrap">
-            <img src="images/cover.png" alt="Know Yourself digital book and workbook cover thumbnail" loading="lazy" class="pricing-cover-thumb" width="140" height="140">
+            <picture class="pricing-cover-picture">
+              <source type="image/webp" srcset="images/cover-480.webp" sizes="140px">
+              <img src="images/cover.jpg" alt="Know Yourself digital book and workbook cover thumbnail" loading="lazy" decoding="async" class="pricing-cover-thumb" width="140" height="140">
+            </picture>
           </div>
 
           <div class="price-display">
@@ -1843,7 +1897,6 @@
           </ul>
 
           <div class="payment-buttons-stack">
-            <!-- Replace REPLACE_WITH_PRODUCT_KEY with the real Payhip product key or use https://payhip.com/buy?link=YOUR_KEY for direct checkout -->
             <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="btn-paypal" id="pricing-paypal-btn">
               <span>Pay with</span> <span class="btn-paypal-text">PayPal</span>
             </a>
@@ -1976,16 +2029,29 @@
     <div class="lightbox-container">
       <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close preview modal">✕</button>
       <div class="lightbox-img-wrap">
-        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img" width="800" height="600" decoding="async">
       </div>
       <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT LOGIC (ACCORDION, STICKY SCROLL & LIGHTBOX) -->
+  <!-- JAVASCRIPT LOGIC (ACCORDION, STICKY SCROLL, LIGHTBOX & ERROR HANDLING) -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // FAQ Accordion functionality
+      // 1. Graceful Image Error Handling
+      const allImages = document.querySelectorAll('img');
+      allImages.forEach(function(img) {
+        img.addEventListener('error', function() {
+          const container = img.closest('.hero-cover-wrap, .inside-visual-banner, .mockup-img-btn, .pricing-cover-thumb-wrap');
+          if (container) {
+            container.classList.add('img-load-error');
+          } else {
+            img.classList.add('img-load-error');
+          }
+        });
+      });
+
+      // 2. FAQ Accordion functionality
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(function(item) {
         const questionBtn = item.querySelector('.faq-question');
@@ -2009,7 +2075,7 @@
         }
       });
 
-      // Sticky Bottom Bar Scroll Listener
+      // 3. Sticky Bottom Bar Scroll Listener
       const stickyBar = document.getElementById('sticky-bar');
       const heroSection = document.getElementById('hero');
       const pricingSection = document.getElementById('pricing');
@@ -2037,7 +2103,7 @@
       window.addEventListener('scroll', handleStickyBarScroll, { passive: true });
       handleStickyBarScroll(); // Initial check
 
-      // Lightbox Modal Functionality
+      // 4. Lightbox Modal Functionality
       const lightboxModal = document.getElementById('image-lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxCaption = document.getElementById('lightbox-caption');
@@ -2104,6 +2170,5 @@
       });
     });
   </script>
-
 </body>
 </html>
