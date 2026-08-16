@@ -172,6 +172,13 @@
       background: linear-gradient(180deg, #f8fafd 0%, #ffffff 100%);
       border-bottom: 1px solid var(--border-color);
     }
+    .hero-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      width: 100%;
+    }
     .hero-wrapper {
       display: flex;
       flex-direction: column;
@@ -255,19 +262,45 @@
       gap: 0.4rem;
     }
     
-    /* HERO MOCKUP CARD */
-    .hero-product-preview {
-      margin-top: 3rem;
+    /* HERO COVER & MOCKUP */
+    .hero-media-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
       width: 100%;
-      max-width: 720px;
+    }
+    .hero-cover-wrap {
+      width: 100%;
+      max-width: 460px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(21, 34, 56, 0.16);
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-cover-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 42px rgba(21, 34, 56, 0.2);
+    }
+    .hero-cover-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .hero-product-preview {
+      width: 100%;
+      max-width: 460px;
       background: #ffffff;
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
       text-align: left;
     }
     .preview-header-tag {
@@ -278,40 +311,40 @@
       font-weight: 700;
     }
     .preview-title {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: var(--navy);
       font-weight: 700;
-      margin: 0.25rem 0 0.75rem;
+      margin: 0.2rem 0 0.5rem;
     }
     .preview-spec-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
     }
     .spec-pill {
       background: var(--bg-soft);
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       font-weight: 600;
-      padding: 0.3rem 0.65rem;
+      padding: 0.25rem 0.5rem;
       border-radius: var(--radius-sm);
     }
     .preview-breakdown-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.75rem;
+      gap: 0.5rem;
       background: var(--bg-soft);
-      padding: 1rem;
-      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      border-radius: var(--radius-sm);
       border: 1px solid var(--border-color);
     }
     .breakdown-row {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
-      font-size: 0.9rem;
+      gap: 0.5rem;
+      font-size: 0.82rem;
       color: var(--text-main);
       font-weight: 500;
     }
@@ -426,6 +459,21 @@
       background: var(--teal-light);
       border-radius: 50%;
       font-size: 0.75rem;
+    }
+    .inside-visual-banner {
+      margin-top: 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      background: #ffffff;
+    }
+    .inside-bundle-img {
+      width: 100%;
+      height: auto;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
     }
 
     /* 5. BONUS SECTION */
@@ -562,7 +610,7 @@
     .mockups-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.75rem;
       margin-top: 1rem;
     }
     .mockup-card {
@@ -575,51 +623,90 @@
       flex-direction: column;
       justify-content: space-between;
       border-top: 4px solid var(--teal);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .mockup-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
     }
     .mockup-header {
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
     }
     .mockup-type {
       font-size: 0.75rem;
       font-weight: 700;
-      color: var(--text-light);
+      color: var(--teal);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .mockup-card h3 {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       color: var(--navy);
       margin-top: 0.25rem;
     }
-    .mockup-preview-box {
-      background: var(--bg-soft);
-      border: 1px dashed var(--border-accent);
+    .mockup-img-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      width: 100%;
+      position: relative;
       border-radius: var(--radius-sm);
-      padding: 1.25rem 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    .mockup-table-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.35rem 0;
-      border-bottom: 1px solid #e2e8f0;
-      font-size: 0.82rem;
-    }
-    .mockup-table-row:last-child {
-      border-bottom: none;
-    }
-    .mockup-score-bar {
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 999px;
       overflow: hidden;
-      margin-top: 4px;
+      margin-bottom: 1rem;
+      display: block;
+      text-align: left;
     }
-    .mockup-score-fill {
+    .mockup-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-soft);
+      overflow: hidden;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .mockup-thumbnail-img {
+      width: 100%;
       height: 100%;
-      background: var(--teal);
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .mockup-img-btn:hover .mockup-thumbnail-img,
+    .mockup-img-btn:focus-visible .mockup-thumbnail-img {
+      transform: scale(1.05);
+    }
+    .mockup-zoom-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(21, 34, 56, 0.45);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .mockup-img-btn:hover .mockup-zoom-overlay,
+    .mockup-img-btn:focus-visible .mockup-zoom-overlay {
+      opacity: 1;
+    }
+    .mockup-zoom-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--navy);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     .mockup-card p.description {
       font-size: 0.88rem;
@@ -768,7 +855,27 @@
     .pricing-subtitle {
       color: var(--text-muted);
       font-size: 0.9rem;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-cover-thumb-wrap {
+      margin: 0 auto 1.5rem;
+      width: 140px;
+      height: 140px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(21, 34, 56, 0.12);
+      border: 2px solid #f2dfa8;
+      background: #ffffff;
+      transition: transform 0.2s ease;
+    }
+    .pricing-cover-thumb-wrap:hover {
+      transform: scale(1.04);
+    }
+    .pricing-cover-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .price-display {
       display: flex;
@@ -1098,6 +1205,96 @@
       gap: 0.25rem;
     }
 
+    /* LIGHTBOX MODAL */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(13, 22, 36, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    .lightbox-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .lightbox-container {
+      position: relative;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+      transform: scale(0.94);
+      transition: transform 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .lightbox-modal.active .lightbox-container {
+      transform: scale(1);
+    }
+    .lightbox-close-btn {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      background: rgba(21, 34, 56, 0.85);
+      color: #ffffff;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s ease, transform 0.2s ease;
+      line-height: 1;
+    }
+    .lightbox-close-btn:hover {
+      background: var(--navy);
+      transform: scale(1.1);
+    }
+    .lightbox-img-wrap {
+      width: 100%;
+      max-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-soft);
+      overflow: auto;
+      padding: 1rem;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+    }
+    .lightbox-caption {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 600;
+      text-align: center;
+    }
+
     /* RESPONSIVE MEDIA QUERIES (DESKTOP ENHANCEMENTS) */
     @media (min-width: 640px) {
       h1 {
@@ -1131,7 +1328,27 @@
         grid-template-columns: 1fr 1fr;
       }
       .hero-product-preview {
-        padding: 2.25rem;
+        padding: 1.5rem;
+      }
+    }
+    @media (min-width: 960px) {
+      .hero-layout-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .hero-wrapper {
+        align-items: flex-start;
+        text-align: left;
+      }
+      .hero-subtext {
+        margin: 0 0 1.75rem;
+      }
+      .hero-rating {
+        justify-content: flex-start;
+      }
+      .hero-guarantee-micro {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -1159,53 +1376,62 @@
     <!-- 2. HERO SECTION -->
     <section id="hero">
       <div class="container">
-        <div class="hero-wrapper">
-          <div class="hero-badge">
-            By Azddine • Digital Self-Development System
-          </div>
-          <h1>Know Yourself — Stop Feeling Lost. Start Living On Purpose.</h1>
-          <p class="hero-subtext">Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.</p>
-          
-          <div class="hero-rating">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <span>4.9 / 5</span>
-            <span class="rating-sub">(340+ readers guided · 31 Pages Instant Download)</span>
-          </div>
-
-          <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="cta-btn-primary" id="hero-cta-btn">
-            Get Instant Access — Start Your Reset Today
-          </a>
-          <div class="hero-guarantee-micro">
-            <span>🛡️ 100% Secure Checkout</span>
-            <span>•</span>
-            <span>Instant PDF · Lifetime Access · $27 one-time</span>
-          </div>
-
-          <!-- Visual Product Representation -->
-          <div class="hero-product-preview" id="hero-book-preview">
-            <div>
-              <span class="preview-header-tag">Complete Digital Package</span>
-              <h2 class="preview-title" style="text-align: left; font-size: 1.35rem; margin-bottom: 0.5rem;">Know Yourself: From Lost to Life Blueprint</h2>
-              <div class="preview-spec-pills">
-                <span class="spec-pill">📖 11-Chapter Book (5 Parts)</span>
-                <span class="spec-pill">✍️ 5-Chapter 90-Day Workbook</span>
-                <span class="spec-pill">🎁 10-Tool Life Reset Toolkit</span>
-                <span class="spec-pill">📄 31 High-Impact Pages</span>
-              </div>
+        <div class="hero-layout-grid">
+          <!-- Left: Headline, Value Proposition & CTA -->
+          <div class="hero-wrapper">
+            <div class="hero-badge">
+              By Azddine • Digital Self-Development System
             </div>
+            <h1>Know Yourself — Stop Feeling Lost. Start Living On Purpose.</h1>
+            <p class="hero-subtext">Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.</p>
             
-            <div class="preview-breakdown-grid">
-              <div class="breakdown-row">
-                <span class="icon">✓</span>
-                <span><strong>Part I (Theory):</strong> AWAKEN, DISCOVER, DESIGN, TRANSFORM, BECOME</span>
+            <div class="hero-rating">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span>4.9 / 5</span>
+              <span class="rating-sub">(340+ readers guided · 31 Pages Instant Download)</span>
+            </div>
+
+            <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="cta-btn-primary" id="hero-cta-btn">
+              Get Instant Access — Start Your Reset Today
+            </a>
+            <div class="hero-guarantee-micro">
+              <span>🛡️ 100% Secure Checkout</span>
+              <span>•</span>
+              <span>Instant PDF · Lifetime Access · $27 one-time</span>
+            </div>
+          </div>
+
+          <!-- Right: Visual Cover Mockup & Package Summary -->
+          <div class="hero-media-wrapper">
+            <div class="hero-cover-wrap" id="hero-cover-card">
+              <img src="images/cover.png" alt="Know Yourself complete book and 90-day workbook digital package by Azddine" class="hero-cover-img" width="460" height="460">
+            </div>
+
+            <div class="hero-product-preview" id="hero-book-preview">
+              <div>
+                <span class="preview-header-tag">Complete Digital Package</span>
+                <h2 class="preview-title" style="text-align: left; font-size: 1.15rem; margin-bottom: 0.35rem;">Know Yourself: From Lost to Life Blueprint</h2>
+                <div class="preview-spec-pills">
+                  <span class="spec-pill">📖 11-Chapter Book (5 Parts)</span>
+                  <span class="spec-pill">✍️ 5-Chapter 90-Day Workbook</span>
+                  <span class="spec-pill">🎁 10-Tool Life Reset Toolkit</span>
+                  <span class="spec-pill">📄 31 High-Impact Pages</span>
+                </div>
               </div>
-              <div class="breakdown-row">
-                <span class="icon">✓</span>
-                <span><strong>Part II (Practice):</strong> 8-Domain Life Audit, Core Values Matrix, 90-Day Action Plan</span>
-              </div>
-              <div class="breakdown-row">
-                <span class="icon">✓</span>
-                <span><strong>Included Bonus:</strong> Complete Life Reset Toolkit with 10 actionable worksheets</span>
+              
+              <div class="preview-breakdown-grid">
+                <div class="breakdown-row">
+                  <span class="icon">✓</span>
+                  <span><strong>Part I (Theory):</strong> AWAKEN, DISCOVER, DESIGN, TRANSFORM, BECOME</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="icon">✓</span>
+                  <span><strong>Part II (Practice):</strong> 8-Domain Life Audit, Core Values Matrix, 90-Day Plan</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="icon">✓</span>
+                  <span><strong>Included Bonus:</strong> Complete Life Reset Toolkit with 10 worksheets</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1315,6 +1541,11 @@
               </li>
             </ul>
           </div>
+        </div>
+
+        <!-- Inside System Visual Overview -->
+        <div class="inside-visual-banner" id="inside-visual-showcase">
+          <img src="images/inside-bundle.png" alt="Inside the complete theoretical book and practical workbook system of Know Yourself" loading="lazy" class="inside-bundle-img" width="1040" height="360">
         </div>
       </div>
     </section>
@@ -1432,100 +1663,71 @@
         <p class="section-subtitle">Real, structured, clean templates ready for digital use on tablet/laptop or standard printing.</p>
 
         <div class="mockups-grid">
-          <!-- Mockup 1 -->
+          <!-- Mockup 1: Life Audit -->
           <div class="mockup-card" id="mockup-life-audit">
             <div class="mockup-header">
               <span class="mockup-type">Worksheet 01</span>
               <h3>Life Audit Across 8 Domains</h3>
             </div>
-            <div class="mockup-preview-box">
-              <div class="mockup-table-row">
-                <span>Career & Purpose</span>
-                <span><strong>7.5 / 10</strong></span>
+            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-life-audit.png" data-caption="Worksheet 01: 8-Domain Life Audit with visual scoring wheel and evaluation criteria for Career, Health, Finance, and Relationships." aria-label="Open full preview of 8-Domain Life Audit worksheet">
+              <div class="mockup-img-wrap">
+                <img src="images/workbook-life-audit.png" alt="Life Audit across 8 life domains worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
+                </div>
               </div>
-              <div class="mockup-score-bar"><div class="mockup-score-fill" style="width: 75%;"></div></div>
-              
-              <div class="mockup-table-row" style="margin-top: 6px;">
-                <span>Health & Vitality</span>
-                <span><strong>5.0 / 10</strong></span>
-              </div>
-              <div class="mockup-score-bar"><div class="mockup-score-fill" style="width: 50%;"></div></div>
-
-              <div class="mockup-table-row" style="margin-top: 6px;">
-                <span>Financial Alignment</span>
-                <span><strong>6.5 / 10</strong></span>
-              </div>
-              <div class="mockup-score-bar"><div class="mockup-score-fill" style="width: 65%;"></div></div>
-            </div>
-            <p class="description">Evaluate your satisfaction across Career, Health, Relationships, Finance, Growth, Environment, Joy, and Purpose to locate hidden leaks.</p>
+            </button>
+            <p class="description">Evaluate your satisfaction across Career, Health, Relationships, Finance, Growth, Environment, Joy, and Purpose to locate hidden energy leaks.</p>
           </div>
 
-          <!-- Mockup 2 -->
+          <!-- Mockup 2: Core Values -->
           <div class="mockup-card" id="mockup-values">
             <div class="mockup-header">
               <span class="mockup-type">Worksheet 02</span>
               <h3>Core Values & Strengths Mapping</h3>
             </div>
-            <div class="mockup-preview-box">
-              <div class="mockup-table-row">
-                <span>1. Autonomy & Freedom</span>
-                <span style="color: var(--teal); font-weight: 600;">Tier 1</span>
+            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-core-values.png" data-caption="Worksheet 02: Core Values & Strengths Mapping with 50+ value elimination matrix and top 5 priority pillars." aria-label="Open full preview of Core Values & Strengths Mapping worksheet">
+              <div class="mockup-img-wrap">
+                <img src="images/workbook-core-values.png" alt="Core Values and Strengths Mapping worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
+                </div>
               </div>
-              <div class="mockup-table-row">
-                <span>2. Creative Mastery</span>
-                <span style="color: var(--teal); font-weight: 600;">Tier 1</span>
-              </div>
-              <div class="mockup-table-row">
-                <span>3. Authentic Connection</span>
-                <span style="color: var(--teal); font-weight: 600;">Tier 1</span>
-              </div>
-            </div>
-            <p class="description">Filter through 50+ human values using our elimination matrix to define your top 5 foundational guiding principles.</p>
+            </button>
+            <p class="description">Filter through 50+ human values using our elimination matrix to define your top 5 foundational guiding principles and natural strengths.</p>
           </div>
 
-          <!-- Mockup 3 -->
+          <!-- Mockup 3: Decision Matrix -->
           <div class="mockup-card" id="mockup-decision-matrix">
             <div class="mockup-header">
               <span class="mockup-type">Worksheet 03</span>
               <h3>Clarity Decision Matrix</h3>
             </div>
-            <div class="mockup-preview-box">
-              <div class="mockup-table-row">
-                <span>Option A (Stay Current Path)</span>
-                <span>Score: <strong>54</strong></span>
+            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-decision-matrix.png" data-caption="Worksheet 03: Clarity Decision Matrix with weighted scoring system to test options against core values and 5-year upside." aria-label="Open full preview of Clarity Decision Matrix worksheet">
+              <div class="mockup-img-wrap">
+                <img src="images/workbook-decision-matrix.png" alt="Clarity Decision Matrix weighted evaluation framework preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
+                </div>
               </div>
-              <div class="mockup-table-row">
-                <span>Option B (Pivot to New Career)</span>
-                <span>Score: <strong>88</strong></span>
-              </div>
-              <div class="mockup-table-row" style="color: var(--teal); font-weight: 600;">
-                <span>Recommendation:</span>
-                <span>Proceed with Option B</span>
-              </div>
-            </div>
+            </button>
             <p class="description">A weighted decision engine to resolve agonizing life choices by testing against values alignment, energy impact, and 5-year upside.</p>
           </div>
 
-          <!-- Mockup 4 -->
+          <!-- Mockup 4: 90-Day Action Plan -->
           <div class="mockup-card" id="mockup-90-day-plan">
             <div class="mockup-header">
               <span class="mockup-type">Worksheet 04</span>
               <h3>90-Day Action Plan & Habit Log</h3>
             </div>
-            <div class="mockup-preview-box">
-              <div class="mockup-table-row">
-                <span>Sprint 1 (Days 1–30): Foundation</span>
-                <span>Week 1-4 Goals</span>
+            <button type="button" class="mockup-img-btn" data-full-img="images/workbook-90-day-plan.png" data-caption="Worksheet 04: 90-Day Action Plan & Habit Tracker with 13-week execution sprints and daily micro-habit consistency tracking." aria-label="Open full preview of 90-Day Action Plan & Habit Log worksheet">
+              <div class="mockup-img-wrap">
+                <img src="images/workbook-90-day-plan.png" alt="90-Day Action Plan and Habit Tracker worksheet preview" loading="lazy" class="mockup-thumbnail-img" width="400" height="300">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
+                </div>
               </div>
-              <div class="mockup-table-row">
-                <span>Sprint 2 (Days 31–60): Execution</span>
-                <span>Week 5-8 Goals</span>
-              </div>
-              <div class="mockup-table-row">
-                <span>Sprint 3 (Days 61–90): Mastery</span>
-                <span>Week 9-13 Review</span>
-              </div>
-            </div>
+            </button>
             <p class="description">Translate long-term dreams into 13-week execution sprints with weekly milestones, daily habit tracking, and reflection logs.</p>
           </div>
         </div>
@@ -1605,6 +1807,10 @@
           <h2 class="pricing-title">Get Instant Access to the Complete System</h2>
           <p class="pricing-subtitle">Everything you need to go from feeling lost to holding a clear 90-day plan.</p>
           
+          <div class="pricing-cover-thumb-wrap">
+            <img src="images/cover.png" alt="Know Yourself digital book and workbook cover thumbnail" loading="lazy" class="pricing-cover-thumb" width="140" height="140">
+          </div>
+
           <div class="price-display">
             <span class="price-original">$47</span>
             <div class="price-current">
@@ -1765,7 +1971,18 @@
     </div>
   </aside>
 
-  <!-- JAVASCRIPT LOGIC (ACCORDION & SCROLL LISTENER) -->
+  <!-- LIGHTBOX MODAL -->
+  <div id="image-lightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Workbook Page Full Preview">
+    <div class="lightbox-container">
+      <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close preview modal">✕</button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC (ACCORDION, STICKY SCROLL & LIGHTBOX) -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // FAQ Accordion functionality
@@ -1819,6 +2036,72 @@
 
       window.addEventListener('scroll', handleStickyBarScroll, { passive: true });
       handleStickyBarScroll(); // Initial check
+
+      // Lightbox Modal Functionality
+      const lightboxModal = document.getElementById('image-lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxCloseBtn = document.getElementById('lightbox-close');
+      const previewButtons = document.querySelectorAll('.mockup-img-btn');
+      let lastFocusedElement = null;
+
+      function openLightbox(imgSrc, captionText, altText, triggerBtn) {
+        if (!lightboxModal || !lightboxImg || !lightboxCaption) return;
+        lastFocusedElement = triggerBtn || document.activeElement;
+        
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = altText || captionText || 'Workbook page preview';
+        lightboxCaption.textContent = captionText || '';
+        
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        
+        if (lightboxCloseBtn) {
+          lightboxCloseBtn.focus();
+        }
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+          lastFocusedElement.focus();
+        }
+      }
+
+      previewButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const imgSrc = btn.getAttribute('data-full-img');
+          const caption = btn.getAttribute('data-caption');
+          const imgElem = btn.querySelector('img');
+          const altText = imgElem ? imgElem.alt : '';
+          if (imgSrc) {
+            openLightbox(imgSrc, caption, altText, btn);
+          }
+        });
+      });
+
+      if (lightboxCloseBtn) {
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+      }
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', function(e) {
+          if (e.target === lightboxModal) {
+            closeLightbox();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
     });
   </script>
 
