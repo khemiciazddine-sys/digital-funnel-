@@ -6,6 +6,28 @@
   <title>Know Yourself: From Lost to Life Blueprint | Complete Book & 90-Day Workbook</title>
   <meta name="description" content="Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.">
   
+  <!-- Compatibility guard for third-party trackers in sandboxed environments -->
+  <script>
+    (function() {
+      try {
+        var currentFetch = window.fetch;
+        if (typeof currentFetch === 'function') {
+          var desc = Object.getOwnPropertyDescriptor(window, 'fetch') ||
+                     (typeof Window !== 'undefined' && Object.getOwnPropertyDescriptor(Window.prototype, 'fetch')) ||
+                     (Object.getPrototypeOf && Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch'));
+          if (!desc || (desc.get && !desc.set) || !desc.writable) {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return currentFetch; },
+              set: function(fn) { currentFetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
