@@ -6,31 +6,31 @@
   <title>Know Yourself: From Lost to Life Blueprint | Complete Book & 90-Day Workbook</title>
   <meta name="description" content="Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.">
   
-  <!-- Preconnect and Resource Hints -->
-  <link rel="preconnect" href="https://connect.facebook.net">
-  <link rel="preconnect" href="https://payhip.com">
-
-  <!-- Compatibility guard for third-party trackers in sandboxed environments -->
+  <!-- Window Fetch Compatibility Shim -->
   <script>
     (function() {
       try {
-        var currentFetch = window.fetch;
-        if (typeof currentFetch === 'function') {
-          var desc = Object.getOwnPropertyDescriptor(window, 'fetch') ||
-                     (typeof Window !== 'undefined' && Object.getOwnPropertyDescriptor(Window.prototype, 'fetch')) ||
-                     (Object.getPrototypeOf && Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch'));
-          if (!desc || (desc.get && !desc.set) || !desc.writable) {
-            Object.defineProperty(window, 'fetch', {
-              get: function() { return currentFetch; },
-              set: function(fn) { currentFetch = fn; },
-              configurable: true,
-              enumerable: true
-            });
-          }
-        }
-      } catch (e) {}
+        var originalFetch = window.fetch ? window.fetch.bind(window) : undefined;
+        var activeFetch = originalFetch;
+        Object.defineProperty(window, 'fetch', {
+          get: function() {
+            return activeFetch;
+          },
+          set: function(newFetch) {
+            activeFetch = newFetch;
+          },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        // Continue if Object.defineProperty is restricted
+      }
     })();
   </script>
+
+  <!-- Preconnect and Resource Hints -->
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://payhip.com">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -153,6 +153,7 @@
 
     /* CSS PERFORMANCE OPTIMIZATIONS */
     #problem,
+    #transformation,
     #whats-inside,
     #bonus,
     #timeline,
@@ -423,7 +424,34 @@
       line-height: 1.6;
     }
 
-    /* 4. WHAT'S INSIDE SECTION */
+    /* 4. TRANSFORMATION SECTION (NEW) */
+    #transformation {
+      background-color: #ffffff;
+      border-top: 1px solid var(--border-color);
+    }
+    .transformation-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      max-width: 800px;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .transformation-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .transformation-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background-color: var(--bg-soft);
+    }
+
+    /* 5. WHAT'S INSIDE SECTION */
     #whats-inside {
       background-color: var(--bg-soft);
     }
@@ -498,13 +526,12 @@
     .inside-bundle-img {
       width: 100%;
       height: auto;
-      max-height: 380px;
       object-fit: contain;
       display: block;
       background-color: var(--bg-soft);
     }
 
-    /* 5. BONUS SECTION */
+    /* 6. BONUS SECTION */
     #bonus {
       background-color: #ffffff;
     }
@@ -573,7 +600,7 @@
       flex-shrink: 0;
     }
 
-    /* 6. CHAPTERS TIMELINE */
+    /* 7. CHAPTERS TIMELINE */
     #timeline {
       background-color: var(--bg-soft);
     }
@@ -631,47 +658,13 @@
       line-height: 1.55;
     }
 
-    /* 7. PREVIEW MOCKUPS */
+    /* 8. PREVIEW MOCKUPS */
     #preview-mockups {
       background-color: #ffffff;
     }
-    .mockups-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-      margin-top: 1rem;
-    }
-    .mockup-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-top: 4px solid var(--teal);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-    .mockup-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-      border-color: #cbd5e1;
-    }
-    .mockup-header {
-      margin-bottom: 0.85rem;
-    }
-    .mockup-type {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .mockup-card h3 {
-      font-size: 1.18rem;
-      color: var(--navy);
-      margin-top: 0.25rem;
+    .preview-hero-showcase {
+      max-width: 860px;
+      margin: 0 auto;
     }
     .mockup-img-btn {
       background: none;
@@ -680,32 +673,31 @@
       cursor: pointer;
       width: 100%;
       position: relative;
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      margin-bottom: 1rem;
       display: block;
       text-align: left;
     }
-    .mockup-img-wrap {
+    .preview-main-wrap {
       position: relative;
       width: 100%;
-      aspect-ratio: 4 / 3;
       background: var(--bg-soft);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border-radius: var(--radius-sm);
       border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
     }
-    .mockup-thumbnail-img {
+    .preview-main-img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
       display: block;
+      object-fit: contain;
       background-color: var(--bg-soft);
       transition: transform 0.35s ease;
     }
-    .mockup-img-btn:hover .mockup-thumbnail-img,
-    .mockup-img-btn:focus-visible .mockup-thumbnail-img {
-      transform: scale(1.04);
+    .mockup-img-btn:hover .preview-main-img,
+    .mockup-img-btn:focus-visible .preview-main-img {
+      transform: scale(1.02);
     }
     .mockup-zoom-overlay {
       position: absolute;
@@ -718,7 +710,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 700;
       opacity: 0;
       transition: opacity 0.2s ease;
@@ -731,20 +723,15 @@
     .mockup-zoom-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
       background: rgba(255, 255, 255, 0.95);
       color: var(--navy);
-      padding: 0.4rem 0.8rem;
+      padding: 0.5rem 1rem;
       border-radius: 999px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .mockup-card p.description {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
 
-    /* 8. TESTIMONIALS */
+    /* 9. TESTIMONIALS */
     #testimonials {
       background-color: var(--bg-soft);
     }
@@ -807,7 +794,7 @@
       color: var(--text-light);
     }
 
-    /* 9. GUARANTEE BOX */
+    /* 10. GUARANTEE BOX */
     #guarantee {
       background-color: #ffffff;
       padding: 3.5rem 0;
@@ -846,7 +833,7 @@
       margin: 0 auto;
     }
 
-    /* 10. PRICING SECTION */
+    /* 11. PRICING SECTION */
     #pricing {
       background-color: var(--bg-soft);
       padding: 4.5rem 0;
@@ -887,24 +874,19 @@
       font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
-    .pricing-cover-thumb-wrap {
+    .pricing-product-img-wrap {
+      max-width: 480px;
       margin: 0 auto 1.5rem;
-      width: 140px;
-      height: 140px;
       border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(21, 34, 56, 0.12);
-      border: 2px solid #f2dfa8;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
       background: var(--bg-soft);
       transition: transform 0.2s ease;
-      position: relative;
     }
-    .pricing-cover-thumb-wrap:hover {
-      transform: scale(1.04);
-    }
-    .pricing-cover-thumb {
+    .pricing-presentation-img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
       display: block;
       background-color: var(--bg-soft);
@@ -1034,7 +1016,7 @@
       gap: 0.4rem;
     }
 
-    /* 11. FAQ SECTION */
+    /* 12. FAQ SECTION */
     #faq {
       background-color: #ffffff;
     }
@@ -1094,7 +1076,7 @@
       transform: rotate(45deg);
     }
 
-    /* 12. FINAL CTA SECTION */
+    /* 13. FINAL CTA SECTION */
     #final-cta {
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1a2f4c 100%);
       color: #ffffff;
@@ -1134,7 +1116,7 @@
       box-shadow: 0 8px 30px rgba(212, 164, 55, 0.5);
     }
 
-    /* 13. FOOTER */
+    /* 14. FOOTER */
     footer {
       background-color: var(--navy-dark);
       color: #94a3b8;
@@ -1339,9 +1321,6 @@
       .problem-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-      .mockups-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
       .testimonials-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -1437,10 +1416,8 @@
           <!-- Right: Visual Cover Mockup & Package Summary -->
           <div class="hero-media-wrapper">
             <div class="hero-cover-wrap" id="hero-cover-card">
-              <picture class="hero-cover-picture">
-                <source type="image/webp" srcset="images/cover-480.webp 480w, images/cover-800.webp 800w, images/cover-1200.webp 1200w" sizes="(max-width: 640px) 90vw, (max-width: 960px) 460px, 460px">
-                <img src="images/cover.jpg" alt="Know Yourself complete theoretical book and 90-day workbook digital package cover by Azddine" class="hero-cover-img" width="460" height="460" fetchpriority="high" decoding="async">
-              </picture>
+              <!-- IMAGE 1: Hero Workbook Image -->
+              <img src="images/hero-workbook-hand.jpg" alt="Know Yourself complete self-development workbook held beside a desk" class="hero-cover-img" width="460" height="580" loading="eager" decoding="async">
             </div>
 
             <div class="hero-product-preview" id="hero-book-preview">
@@ -1503,7 +1480,20 @@
       </div>
     </section>
 
-    <!-- 4. WHAT'S INSIDE SECTION -->
+    <!-- 4. TRANSFORMATION SECTION (NEW: IMAGE 2) -->
+    <section id="transformation">
+      <div class="container container-narrow">
+        <h2>See the Direction You Can Build</h2>
+        <p class="section-subtitle">Move from scattered effort and uncertainty toward clearer priorities, stronger habits, and a practical 90-day plan.</p>
+        
+        <div class="transformation-card" id="transformation-showcase">
+          <!-- IMAGE 2: Transformation Image -->
+          <img src="images/transformation-before-after.jpg" alt="Before and after transformation visual for the Know Yourself life blueprint workbook" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHAT'S INSIDE SECTION (WITH IMAGE 3) -->
     <section id="whats-inside" class="bg-soft">
       <div class="container">
         <h2>What's Inside the Complete System</h2>
@@ -1579,17 +1569,15 @@
           </div>
         </div>
 
-        <!-- Inside System Visual Overview -->
+        <!-- Inside System Visual Overview (IMAGE 3) -->
         <div class="inside-visual-banner" id="inside-visual-showcase">
-          <picture class="inside-picture">
-            <source type="image/webp" srcset="images/inside-bundle-480.webp 480w, images/inside-bundle-800.webp 800w, images/inside-bundle-1200.webp 1200w" sizes="(max-width: 640px) 95vw, (max-width: 1040px) 90vw, 1040px">
-            <img src="images/inside-bundle.jpg" alt="Inside the complete theoretical book and practical workbook system of Know Yourself" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="380">
-          </picture>
+          <!-- IMAGE 3: Product Contents Image -->
+          <img src="images/everything-in-one-workbook.jpg" alt="Know Yourself workbook showing Life Audit, values, strengths, decision matrix, and 90-day plan" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500">
         </div>
       </div>
     </section>
 
-    <!-- 5. BONUS SECTION -->
+    <!-- 6. BONUS SECTION -->
     <section id="bonus">
       <div class="container container-narrow">
         <div class="bonus-box" id="bonus-card">
@@ -1645,7 +1633,7 @@
       </div>
     </section>
 
-    <!-- 6. CHAPTERS TIMELINE -->
+    <!-- 7. CHAPTERS TIMELINE -->
     <section id="timeline" class="bg-soft">
       <div class="container">
         <h2>The 5-Part Transformation Journey</h2>
@@ -1695,97 +1683,27 @@
       </div>
     </section>
 
-    <!-- 7. PREVIEW MOCKUPS -->
+    <!-- 8. REAL PAGES PREVIEW (WITH IMAGE 4 & LIGHTBOX) -->
     <section id="preview-mockups">
       <div class="container">
-        <h2>Look Inside the Workbook Pages</h2>
+        <h2>Look Inside the Complete Edition</h2>
         <p class="section-subtitle">Real, structured, clean templates ready for digital use on tablet/laptop or standard printing.</p>
 
-        <div class="mockups-grid">
-          <!-- Mockup 1: Life Audit -->
-          <div class="mockup-card" id="mockup-life-audit">
-            <div class="mockup-header">
-              <span class="mockup-type">Worksheet 01</span>
-              <h3>Life Audit Across 8 Domains</h3>
-            </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/life-audit-1200.webp" data-caption="Worksheet 01: 8-Domain Life Audit with visual scoring wheel and evaluation criteria for Career, Health, Finance, and Relationships." aria-label="Open full preview of 8-Domain Life Audit worksheet">
-              <div class="mockup-img-wrap">
-                <picture class="mockup-picture">
-                  <source type="image/webp" srcset="images/life-audit-480.webp 480w, images/life-audit-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
-                  <img src="images/life-audit.jpg" alt="Life Audit across 8 life domains worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
-                </picture>
-                <div class="mockup-zoom-overlay">
-                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
-                </div>
+        <div class="preview-hero-showcase" id="complete-edition-preview-block">
+          <!-- IMAGE 4: Complete Edition Image with Lightbox -->
+          <button type="button" class="mockup-img-btn" data-full-img="images/complete-edition-pages.jpg" data-caption="Complete Edition of Know Yourself with practical workbook pages and 90-day plan." aria-label="Open full preview of Complete Edition pages">
+            <div class="preview-main-wrap">
+              <img src="images/complete-edition-pages.jpg" alt="Complete Edition of Know Yourself with practical workbook pages and 90-day plan" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async">
+              <div class="mockup-zoom-overlay">
+                <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
               </div>
-            </button>
-            <p class="description">Evaluate your satisfaction across Career, Health, Relationships, Finance, Growth, Environment, Joy, and Purpose to locate hidden energy leaks.</p>
-          </div>
-
-          <!-- Mockup 2: Core Values -->
-          <div class="mockup-card" id="mockup-values">
-            <div class="mockup-header">
-              <span class="mockup-type">Worksheet 02</span>
-              <h3>Core Values & Strengths Mapping</h3>
             </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/core-values-1200.webp" data-caption="Worksheet 02: Core Values & Strengths Mapping with 50+ value elimination matrix and top 5 priority pillars." aria-label="Open full preview of Core Values & Strengths Mapping worksheet">
-              <div class="mockup-img-wrap">
-                <picture class="mockup-picture">
-                  <source type="image/webp" srcset="images/core-values-480.webp 480w, images/core-values-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
-                  <img src="images/core-values.jpg" alt="Core Values and Strengths Mapping worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
-                </picture>
-                <div class="mockup-zoom-overlay">
-                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
-                </div>
-              </div>
-            </button>
-            <p class="description">Filter through 50+ human values using our elimination matrix to define your top 5 foundational guiding principles and natural strengths.</p>
-          </div>
-
-          <!-- Mockup 3: Decision Matrix -->
-          <div class="mockup-card" id="mockup-decision-matrix">
-            <div class="mockup-header">
-              <span class="mockup-type">Worksheet 03</span>
-              <h3>Clarity Decision Matrix</h3>
-            </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/decision-matrix-1200.webp" data-caption="Worksheet 03: Clarity Decision Matrix with weighted scoring system to test options against core values and 5-year upside." aria-label="Open full preview of Clarity Decision Matrix worksheet">
-              <div class="mockup-img-wrap">
-                <picture class="mockup-picture">
-                  <source type="image/webp" srcset="images/decision-matrix-480.webp 480w, images/decision-matrix-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
-                  <img src="images/decision-matrix.jpg" alt="Clarity Decision Matrix weighted evaluation framework preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
-                </picture>
-                <div class="mockup-zoom-overlay">
-                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
-                </div>
-              </div>
-            </button>
-            <p class="description">A weighted decision engine to resolve agonizing life choices by testing against values alignment, energy impact, and 5-year upside.</p>
-          </div>
-
-          <!-- Mockup 4: 90-Day Action Plan -->
-          <div class="mockup-card" id="mockup-90-day-plan">
-            <div class="mockup-header">
-              <span class="mockup-type">Worksheet 04</span>
-              <h3>90-Day Action Plan & Habit Log</h3>
-            </div>
-            <button type="button" class="mockup-img-btn" data-full-img="images/ninety-day-plan-1200.webp" data-caption="Worksheet 04: 90-Day Action Plan & Habit Tracker with 13-week execution sprints and daily micro-habit consistency tracking." aria-label="Open full preview of 90-Day Action Plan & Habit Log worksheet">
-              <div class="mockup-img-wrap">
-                <picture class="mockup-picture">
-                  <source type="image/webp" srcset="images/ninety-day-plan-480.webp 480w, images/ninety-day-plan-800.webp 800w" sizes="(max-width: 640px) 90vw, 400px">
-                  <img src="images/ninety-day-plan.jpg" alt="90-Day Action Plan and Habit Tracker worksheet preview" loading="lazy" decoding="async" class="mockup-thumbnail-img" width="400" height="300">
-                </picture>
-                <div class="mockup-zoom-overlay">
-                  <span class="mockup-zoom-badge">🔍 Click to Zoom</span>
-                </div>
-              </div>
-            </button>
-            <p class="description">Translate long-term dreams into 13-week execution sprints with weekly milestones, daily habit tracking, and reflection logs.</p>
-          </div>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- 8. TESTIMONIALS -->
+    <!-- 9. TESTIMONIALS -->
     <section id="testimonials" class="bg-soft">
       <div class="container">
         <h2>What Readers Are Saying</h2>
@@ -1837,7 +1755,7 @@
       </div>
     </section>
 
-    <!-- 9. GUARANTEE BOX -->
+    <!-- 10. GUARANTEE BOX -->
     <section id="guarantee">
       <div class="container">
         <div class="guarantee-card" id="guarantee-box">
@@ -1850,7 +1768,7 @@
       </div>
     </section>
 
-    <!-- 10. PRICING CARD -->
+    <!-- 11. PRICING CARD (WITH IMAGE 5) -->
     <section id="pricing" class="bg-soft">
       <div class="container">
         <div class="pricing-card" id="pricing-card">
@@ -1858,11 +1776,9 @@
           <h2 class="pricing-title">Get Instant Access to the Complete System</h2>
           <p class="pricing-subtitle">Everything you need to go from feeling lost to holding a clear 90-day plan.</p>
           
-          <div class="pricing-cover-thumb-wrap">
-            <picture class="pricing-cover-picture">
-              <source type="image/webp" srcset="images/cover-480.webp" sizes="140px">
-              <img src="images/cover.jpg" alt="Know Yourself digital book and workbook cover thumbnail" loading="lazy" decoding="async" class="pricing-cover-thumb" width="140" height="140">
-            </picture>
+          <!-- IMAGE 5: Pricing Product Presentation Image -->
+          <div class="pricing-product-img-wrap" id="pricing-presentation-block">
+            <img src="images/product-presentation-27.jpg" alt="Know Yourself Complete Edition digital book and practical workbook product presentation" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async">
           </div>
 
           <div class="price-display">
@@ -1912,7 +1828,7 @@
       </div>
     </section>
 
-    <!-- 11. FAQ SECTION -->
+    <!-- 12. FAQ SECTION -->
     <section id="faq">
       <div class="container container-narrow">
         <h2>Frequently Asked Questions</h2>
@@ -1982,7 +1898,7 @@
       </div>
     </section>
 
-    <!-- 12. FINAL CTA SECTION -->
+    <!-- 13. FINAL CTA SECTION -->
     <section id="final-cta">
       <div class="container">
         <h2>Your Life Won't Change Until Your Blueprint Does</h2>
@@ -1995,7 +1911,7 @@
     </section>
   </main>
 
-  <!-- 13. FOOTER -->
+  <!-- 14. FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -2042,7 +1958,7 @@
       const allImages = document.querySelectorAll('img');
       allImages.forEach(function(img) {
         img.addEventListener('error', function() {
-          const container = img.closest('.hero-cover-wrap, .inside-visual-banner, .mockup-img-btn, .pricing-cover-thumb-wrap');
+          const container = img.closest('.hero-cover-wrap, .transformation-card, .inside-visual-banner, .preview-main-wrap, .pricing-product-img-wrap');
           if (container) {
             container.classList.add('img-load-error');
           } else {
