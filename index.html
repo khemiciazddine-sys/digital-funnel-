@@ -658,9 +658,48 @@
       line-height: 1.55;
     }
 
-    /* 8. PREVIEW MOCKUPS */
+    /* 8. PREVIEW MOCKUPS & GALLERY */
     #preview-mockups {
       background-color: #ffffff;
+    }
+    .preview-gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .preview-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.25rem;
+      }
+    }
+    .preview-gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .preview-gallery-info {
+      text-align: center;
+    }
+    .preview-gallery-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-light);
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.35rem;
+    }
+    .preview-gallery-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
     }
     .preview-hero-showcase {
       max-width: 860px;
@@ -1416,8 +1455,8 @@
           <!-- Right: Visual Cover Mockup & Package Summary -->
           <div class="hero-media-wrapper">
             <div class="hero-cover-wrap" id="hero-cover-card">
-              <!-- IMAGE 1: Hero Workbook Image -->
-              <img src="images/hero-workbook-hand.jpg" alt="Know Yourself complete self-development workbook held beside a desk" class="hero-cover-img" width="460" height="580" loading="eager" decoding="async">
+              <!-- IMAGE 1: Hero Main Workbook Image -->
+              <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" alt="Know Yourself complete self-development workbook held beside a desk with coffee" class="hero-cover-img" width="460" height="580" loading="eager" decoding="async" referrerpolicy="no-referrer">
             </div>
 
             <div class="hero-product-preview" id="hero-book-preview">
@@ -1480,20 +1519,20 @@
       </div>
     </section>
 
-    <!-- 4. TRANSFORMATION SECTION (NEW: IMAGE 2) -->
+    <!-- 4. TRANSFORMATION SECTION (IMAGE 2) -->
     <section id="transformation">
       <div class="container container-narrow">
         <h2>See the Direction You Can Build</h2>
         <p class="section-subtitle">Move from scattered effort and uncertainty toward clearer priorities, stronger habits, and a practical 90-day plan.</p>
         
         <div class="transformation-card" id="transformation-showcase">
-          <!-- IMAGE 2: Transformation Image -->
-          <img src="images/transformation-before-after.jpg" alt="Before and after transformation visual for the Know Yourself life blueprint workbook" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async">
+          <!-- IMAGE 2: Transformation Before / After Image -->
+          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_03_35%20PM.png" alt="Imagine your life after finishing this workbook - Before and After transformation guide" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async" referrerpolicy="no-referrer">
         </div>
       </div>
     </section>
 
-    <!-- 5. WHAT'S INSIDE SECTION (WITH IMAGE 3) -->
+    <!-- 5. WHAT'S INSIDE SECTION (IMAGE 3) -->
     <section id="whats-inside" class="bg-soft">
       <div class="container">
         <h2>What's Inside the Complete System</h2>
@@ -1571,8 +1610,8 @@
 
         <!-- Inside System Visual Overview (IMAGE 3) -->
         <div class="inside-visual-banner" id="inside-visual-showcase">
-          <!-- IMAGE 3: Product Contents Image -->
-          <img src="images/everything-in-one-workbook.jpg" alt="Know Yourself workbook showing Life Audit, values, strengths, decision matrix, and 90-day plan" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500">
+          <!-- IMAGE 3: Book and Workbook Content Image -->
+          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_09_25%20PM.png" alt="Everything you need in one workbook - Life Audit, Values, Strengths, Decision Matrix, and 90-day plan" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500" referrerpolicy="no-referrer">
         </div>
       </div>
     </section>
@@ -1683,22 +1722,44 @@
       </div>
     </section>
 
-    <!-- 8. REAL PAGES PREVIEW (WITH IMAGE 4 & LIGHTBOX) -->
+    <!-- 8. REAL PRODUCT PREVIEW & GALLERY (IMAGES 4 & 5 WITH LIGHTBOX) -->
     <section id="preview-mockups">
       <div class="container">
         <h2>Look Inside the Complete Edition</h2>
         <p class="section-subtitle">Real, structured, clean templates ready for digital use on tablet/laptop or standard printing.</p>
 
-        <div class="preview-hero-showcase" id="complete-edition-preview-block">
-          <!-- IMAGE 4: Complete Edition Image with Lightbox -->
-          <button type="button" class="mockup-img-btn" data-full-img="images/complete-edition-pages.jpg" data-caption="Complete Edition of Know Yourself with practical workbook pages and 90-day plan." aria-label="Open full preview of Complete Edition pages">
-            <div class="preview-main-wrap">
-              <img src="images/complete-edition-pages.jpg" alt="Complete Edition of Know Yourself with practical workbook pages and 90-day plan" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async">
-              <div class="mockup-zoom-overlay">
-                <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
+        <div class="preview-gallery-grid" id="product-preview-gallery">
+          <!-- IMAGE 4: Complete Edition Main Preview -->
+          <div class="preview-gallery-item" id="gallery-item-complete">
+            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" data-caption="Know Yourself Complete Edition: 11-Chapter Theoretical Book & 5-Chapter Practical Workbook with 90-Day Plan." aria-label="Open full preview of Complete Edition pages">
+              <div class="preview-main-wrap">
+                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" alt="Know Yourself Complete Edition Theoretical Book and Practical Workbook 11 chapters and 90-day plan overview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
+                </div>
               </div>
+            </button>
+            <div class="preview-gallery-info">
+              <span class="preview-gallery-badge">Core System Overview</span>
+              <h3 class="preview-gallery-title">Complete Theoretical & Practical Edition</h3>
             </div>
-          </button>
+          </div>
+
+          <!-- IMAGE 5: Secondary Gallery Preview -->
+          <div class="preview-gallery-item" id="gallery-item-premium">
+            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" data-caption="Know Yourself Premium Workbook and Life Blueprint compass edition with exercises." aria-label="Open full preview of Premium Workbook edition">
+              <div class="preview-main-wrap">
+                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" alt="Know Yourself Premium Workbook and Life Blueprint compass edition" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                <div class="mockup-zoom-overlay">
+                  <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
+                </div>
+              </div>
+            </button>
+            <div class="preview-gallery-info">
+              <span class="preview-gallery-badge">Action-Oriented Format</span>
+              <h3 class="preview-gallery-title">Premium Life Blueprint Edition</h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1768,7 +1829,7 @@
       </div>
     </section>
 
-    <!-- 11. PRICING CARD (WITH IMAGE 5) -->
+    <!-- 11. PRICING CARD (IMAGE 6) -->
     <section id="pricing" class="bg-soft">
       <div class="container">
         <div class="pricing-card" id="pricing-card">
@@ -1776,9 +1837,9 @@
           <h2 class="pricing-title">Get Instant Access to the Complete System</h2>
           <p class="pricing-subtitle">Everything you need to go from feeling lost to holding a clear 90-day plan.</p>
           
-          <!-- IMAGE 5: Pricing Product Presentation Image -->
+          <!-- IMAGE 6: Pricing Card / Product Presentation Image -->
           <div class="pricing-product-img-wrap" id="pricing-presentation-block">
-            <img src="images/product-presentation-27.jpg" alt="Know Yourself Complete Edition digital book and practical workbook product presentation" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000ea5c7243bb227fa706842070_043731%20%281%29.png" alt="Know Yourself Complete Edition theoretical book and practical workbook digital presentation for $27" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           </div>
 
           <div class="price-display">
@@ -1945,7 +2006,7 @@
     <div class="lightbox-container">
       <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close preview modal">✕</button>
       <div class="lightbox-img-wrap">
-        <img src="" alt="" id="lightbox-img" class="lightbox-img" width="800" height="600" decoding="async">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img" width="800" height="600" decoding="async" referrerpolicy="no-referrer">
       </div>
       <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
