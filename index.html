@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Know Yourself: From Lost to Life Blueprint | Complete Book & 90-Day Workbook</title>
-  <meta name="description" content="Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.">
+  <title>SELF CLARITY SYSTEM | Practical Digital Tools for Clearer Thinking & Aligned Action</title>
+  <meta name="description" content="SELF CLARITY SYSTEM — Practical digital tools for clearer thinking, aligned action, and meaningful progress. Explore our flagship system, Know Yourself: From Lost to Life Blueprint.">
+  <link rel="canonical" href="https://selfclaritysystem.online/">
   
   <!-- Window Fetch Compatibility Shim -->
   <script>
@@ -31,6 +32,9 @@
   <!-- Preconnect and Resource Hints -->
   <link rel="preconnect" href="https://connect.facebook.net">
   <link rel="preconnect" href="https://payhip.com">
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+  <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" fetchpriority="high">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -55,31 +59,33 @@
       padding: 0;
     }
     :root {
-      --navy: #152238;
-      --navy-dark: #0d1624;
-      --navy-light: #1e3150;
+      --navy: #0f1c2e;
+      --navy-dark: #09121e;
+      --navy-light: #182a44;
       --gold: #d4a437;
-      --gold-hover: #c2932b;
-      --gold-light: #fef8eb;
-      --teal: #1f7a8c;
-      --teal-light: #e8f5f7;
-      --teal-dark: #175d6b;
+      --gold-hover: #be8e24;
+      --gold-light: #fdf8eb;
+      --gold-border: #f3dfaa;
+      --teal: #167a8c;
+      --teal-light: #e8f6f8;
+      --teal-dark: #105967;
       --bg-white: #ffffff;
-      --bg-soft: #f8f9fb;
+      --bg-soft: #f8fafc;
       --bg-card: #ffffff;
-      --text-main: #152238;
-      --text-muted: #53637a;
-      --text-light: #7b8a9e;
+      --text-main: #0f1c2e;
+      --text-muted: #4a5a70;
+      --text-light: #718298;
       --border-color: #e2e8f0;
       --border-accent: #cbd5e1;
       --paypal-yellow: #ffc439;
       --paypal-yellow-hover: #f2ba33;
-      --shadow-sm: 0 1px 3px rgba(21, 34, 56, 0.06), 0 1px 2px rgba(21, 34, 56, 0.04);
-      --shadow-md: 0 4px 14px rgba(21, 34, 56, 0.08), 0 2px 6px rgba(21, 34, 56, 0.04);
-      --shadow-lg: 0 10px 30px rgba(21, 34, 56, 0.12), 0 4px 10px rgba(21, 34, 56, 0.06);
+      --shadow-sm: 0 1px 3px rgba(15, 28, 46, 0.05), 0 1px 2px rgba(15, 28, 46, 0.03);
+      --shadow-md: 0 4px 16px rgba(15, 28, 46, 0.08), 0 2px 6px rgba(15, 28, 46, 0.04);
+      --shadow-lg: 0 12px 32px rgba(15, 28, 46, 0.12), 0 4px 12px rgba(15, 28, 46, 0.06);
       --radius-sm: 6px;
       --radius-md: 10px;
       --radius-lg: 16px;
+      --radius-xl: 20px;
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     html {
@@ -94,6 +100,9 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     img, svg, picture {
       display: block;
@@ -103,7 +112,7 @@
       color: inherit;
       text-decoration: none;
     }
-    button, input, textarea {
+    button, input, textarea, select {
       font-family: inherit;
     }
 
@@ -151,47 +160,219 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    /* CSS PERFORMANCE OPTIMIZATIONS */
-    #problem,
-    #transformation,
-    #whats-inside,
-    #bonus,
-    #timeline,
-    #preview-mockups,
-    #testimonials,
-    #guarantee,
-    #pricing,
-    #faq,
-    #final-cta {
-      content-visibility: auto;
-      contain-intrinsic-size: 1px 700px;
-    }
-
-    /* IMAGE LOAD ERROR GRACEFUL FALLBACK */
-    .img-load-error {
-      display: none !important;
-    }
-
-    /* 1. TRUST BAR */
-    #trust-bar {
-      background-color: var(--navy);
+    /* 1. TOP ANNOUNCEMENT / TRUST BAR */
+    #top-trust-bar {
+      background-color: var(--navy-dark);
       color: #e2e8f0;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      padding: 0.65rem 1rem;
+      padding: 0.55rem 1rem;
       text-align: center;
       letter-spacing: 0.02em;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .trust-bar-text {
+    .top-bar-inner {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.5rem 0.85rem;
+      gap: 0.4rem 0.85rem;
+    }
+    .top-bar-highlight {
+      color: var(--gold);
+      font-weight: 700;
     }
 
-    /* 2. HERO SECTION */
+    /* 2. MAIN HEADER & NAVIGATION */
+    #site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 990;
+      box-shadow: 0 1px 4px rgba(15, 28, 46, 0.04);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 1.5rem;
+    }
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .brand-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--gold);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(15, 28, 46, 0.15);
+      border: 1px solid rgba(212, 164, 55, 0.3);
+      flex-shrink: 0;
+    }
+    .brand-logo-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+    .brand-tagline-sub {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      font-weight: 500;
+      display: none;
+      letter-spacing: 0.01em;
+    }
+    @media (min-width: 900px) {
+      .brand-tagline-sub {
+        display: block;
+      }
+    }
+
+    /* Nav Links */
+    .site-nav {
+      display: none;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    @media (min-width: 820px) {
+      .site-nav {
+        display: flex;
+      }
+    }
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.35rem 0;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--navy);
+    }
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(212, 164, 55, 0.3);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-header-cta:hover {
+      background: var(--gold-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(212, 164, 55, 0.4);
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      gap: 5px;
+      padding: 8px;
+    }
+    @media (min-width: 820px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    .mobile-menu-btn span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+
+    /* Mobile Menu Drawer */
+    #mobile-drawer {
+      display: none;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    #mobile-drawer.active {
+      display: block;
+    }
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-nav-link {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: block;
+      padding: 0.4rem 0;
+    }
+    .mobile-nav-link.active {
+      color: var(--gold-hover);
+    }
+
+    /* VIEW CONTROLLER / ROUTING */
+    .site-view {
+      display: none;
+    }
+    .site-view.active-view {
+      display: block;
+    }
+
+    /* HERO SECTION */
     #hero {
       padding: 3.5rem 0 4.5rem;
       background: linear-gradient(180deg, #f8fafd 0%, #ffffff 100%);
@@ -215,7 +396,7 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--gold-light);
-      border: 1px solid #f2dfa8;
+      border: 1px solid var(--gold-border);
       color: #8c6819;
       font-size: 0.82rem;
       font-weight: 600;
@@ -249,45 +430,104 @@
       font-size: 1.1rem;
     }
     .rating-sub {
-      color: var(--text-light);
-      font-weight: 400;
-      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: normal;
     }
+
+    /* CTA Buttons */
     .cta-btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--gold) 0%, #c59325 100%);
-      color: #ffffff;
-      font-size: 1.12rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gold);
+      color: var(--navy-dark);
+      font-size: 1.15rem;
       font-weight: 700;
-      padding: 1rem 2rem;
+      padding: 1.1rem 2.25rem;
       border-radius: var(--radius-md);
-      box-shadow: 0 6px 20px rgba(212, 164, 55, 0.35);
-      transition: all 0.2s ease;
-      cursor: pointer;
-      text-align: center;
-      border: none;
+      box-shadow: 0 4px 14px rgba(212, 164, 55, 0.4);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       width: 100%;
       max-width: 480px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
     }
     .cta-btn-primary:hover {
-      background: linear-gradient(135deg, #dfb043 0%, var(--gold) 100%);
+      background-color: var(--gold-hover);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(212, 164, 55, 0.45);
-    }
-    .cta-btn-primary:active {
-      transform: translateY(0);
+      box-shadow: 0 6px 20px rgba(212, 164, 55, 0.5);
     }
     .hero-guarantee-micro {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      margin-top: 0.85rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
     }
-    
-    /* HERO COVER & MOCKUP */
+
+    /* UNIVERSAL IMAGE & FALLBACK RULES */
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .hero-cover-img,
+    .transformation-img,
+    .inside-bundle-img,
+    .preview-main-img,
+    .pricing-presentation-img,
+    .lightbox-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .hero-cover-img {
+      border-radius: var(--radius-md);
+    }
+    .pricing-presentation-img {
+      border-radius: var(--radius-sm);
+    }
+    .img-fallback-placeholder {
+      width: 100%;
+      background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+      border: 1px dashed #cbd5e1;
+      border-radius: var(--radius-md);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.25rem 1.5rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .img-fallback-icon {
+      font-size: 2.25rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .img-fallback-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+    .img-fallback-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      max-width: 440px;
+      line-height: 1.45;
+    }
+
+    /* Hero Media Cover */
     .hero-media-wrapper {
       display: flex;
       flex-direction: column;
@@ -297,194 +537,148 @@
     }
     .hero-cover-wrap {
       width: 100%;
-      max-width: 460px;
+      max-width: 420px;
+      background: #ffffff;
       border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 16px 36px rgba(21, 34, 56, 0.16);
+      padding: 0.85rem;
+      box-shadow: var(--shadow-lg);
       border: 1px solid var(--border-color);
-      background: var(--bg-soft);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-    }
-    .hero-cover-wrap:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 42px rgba(21, 34, 56, 0.2);
-    }
-    .hero-cover-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      background-color: var(--bg-soft);
     }
     .hero-product-preview {
       width: 100%;
-      max-width: 460px;
+      max-width: 420px;
       background: #ffffff;
-      border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
       padding: 1.25rem;
       box-shadow: var(--shadow-sm);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      text-align: left;
     }
     .preview-header-tag {
       font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       color: var(--teal);
-      font-weight: 700;
-    }
-    .preview-title {
-      font-size: 1.15rem;
-      color: var(--navy);
-      font-weight: 700;
-      margin: 0.2rem 0 0.5rem;
+      display: inline-block;
+      margin-bottom: 0.25rem;
     }
     .preview-spec-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
+      margin-top: 0.5rem;
       margin-bottom: 0.75rem;
     }
     .spec-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
       background: var(--bg-soft);
       border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      font-size: 0.76rem;
-      font-weight: 600;
-      padding: 0.25rem 0.5rem;
+      padding: 0.2rem 0.55rem;
       border-radius: var(--radius-sm);
+      color: var(--navy);
     }
     .preview-breakdown-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 0.5rem;
-      background: var(--bg-soft);
-      padding: 0.75rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-color);
+      padding-top: 0.75rem;
     }
     .breakdown-row {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.5rem;
-      font-size: 0.82rem;
-      color: var(--text-main);
-      font-weight: 500;
     }
-    .breakdown-row span.icon {
+    .breakdown-row .icon {
       color: var(--teal);
       font-weight: bold;
     }
 
     /* 3. PROBLEM SECTION */
-    #problem {
-      background-color: #ffffff;
-    }
     .problem-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
-      margin-top: 1rem;
     }
     .problem-card {
-      background: var(--bg-soft);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 1.75rem 1.5rem;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      position: relative;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease;
     }
     .problem-card:hover {
-      border-color: #cbd5e1;
       transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
     .problem-number {
-      display: inline-block;
       font-size: 0.75rem;
       font-weight: 700;
       color: var(--teal);
-      background: var(--teal-light);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.85rem;
       letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.5rem;
     }
     .problem-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.65rem;
-      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
     }
     .problem-card p {
       color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 0.98rem;
     }
 
-    /* 4. TRANSFORMATION SECTION (NEW) */
-    #transformation {
-      background-color: #ffffff;
-      border-top: 1px solid var(--border-color);
-    }
+    /* 4. TRANSFORMATION SECTION */
     .transformation-card {
-      background: var(--bg-soft);
+      background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-md);
-      max-width: 800px;
       margin: 0 auto;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .transformation-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
+      max-width: 820px;
     }
     .transformation-img {
       width: 100%;
       height: auto;
       display: block;
-      object-fit: contain;
-      background-color: var(--bg-soft);
     }
 
     /* 5. WHAT'S INSIDE SECTION */
-    #whats-inside {
-      background-color: var(--bg-soft);
-    }
     .inside-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
-      margin-top: 1.5rem;
+      margin-bottom: 3rem;
     }
     .inside-col {
       background: #ffffff;
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2rem 1.75rem;
+      border-radius: var(--radius-md);
+      padding: 2rem;
       box-shadow: var(--shadow-sm);
     }
     .inside-col-header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 1.25rem;
       margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
     }
     .inside-tag {
       font-size: 0.75rem;
       font-weight: 700;
-      color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
+      color: var(--teal);
       display: block;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.25rem;
     }
     .inside-col h3 {
       font-size: 1.35rem;
-      color: var(--navy);
     }
     .checklist {
       list-style: none;
@@ -497,147 +691,126 @@
       align-items: flex-start;
       gap: 0.75rem;
       font-size: 0.95rem;
-      color: var(--text-main);
-      line-height: 1.5;
+      color: var(--text-muted);
     }
     .check-icon {
       color: var(--teal);
-      flex-shrink: 0;
-      margin-top: 0.15rem;
-      font-weight: bold;
+      background: var(--teal-light);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 20px;
-      height: 20px;
-      background: var(--teal-light);
-      border-radius: 50%;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
     .inside-visual-banner {
-      margin-top: 2rem;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid var(--border-color);
       box-shadow: var(--shadow-md);
-      background: var(--bg-soft);
-      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .inside-bundle-img {
       width: 100%;
       height: auto;
-      object-fit: contain;
       display: block;
-      background-color: var(--bg-soft);
     }
 
     /* 6. BONUS SECTION */
-    #bonus {
-      background-color: #ffffff;
-    }
     .bonus-box {
-      background: linear-gradient(135deg, #152238 0%, #1e3150 100%);
-      color: #ffffff;
+      background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
+      border: 2px solid var(--gold-border);
       border-radius: var(--radius-lg);
       padding: 2.5rem 1.75rem;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #2d4263;
+      text-align: center;
+      box-shadow: var(--shadow-md);
     }
     .bonus-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+      display: inline-block;
       background: var(--gold);
-      color: #152238;
-      font-size: 0.8rem;
+      color: var(--navy-dark);
+      font-size: 0.82rem;
       font-weight: 700;
-      padding: 0.35rem 0.85rem;
+      padding: 0.35rem 0.9rem;
       border-radius: 999px;
-      margin-bottom: 1.25rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
     }
-    .bonus-box h3 {
-      color: #ffffff;
-      font-size: 1.6rem;
+    .bonus-box h2 {
       margin-bottom: 0.5rem;
     }
     .bonus-value-tag {
-      color: #cbd5e1;
-      font-size: 1rem;
-      margin-bottom: 1.75rem;
-      font-weight: 400;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      margin-bottom: 2rem;
     }
     .bonus-tools-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.85rem;
+      text-align: left;
     }
     .bonus-tool-item {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-sm);
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.15rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      color: #f1f5f9;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
     }
     .bonus-tool-num {
-      color: var(--gold);
-      font-weight: 700;
+      background: var(--teal-light);
+      color: var(--teal-dark);
       font-size: 0.8rem;
-      background: rgba(212, 164, 55, 0.15);
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      flex-shrink: 0;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
     }
 
-    /* 7. CHAPTERS TIMELINE */
-    #timeline {
-      background-color: var(--bg-soft);
-    }
+    /* 7. TIMELINE SECTION */
     .timeline-list {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
-      max-width: 800px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .timeline-item {
-      display: flex;
-      gap: 1.25rem;
       background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
+      display: flex;
       align-items: flex-start;
+      gap: 1.25rem;
+      box-shadow: var(--shadow-sm);
     }
     .timeline-badge {
       background: var(--navy);
-      color: #ffffff;
+      color: var(--gold);
       font-weight: 800;
-      font-size: 0.95rem;
-      min-width: 42px;
+      font-size: 1.1rem;
+      width: 42px;
       height: 42px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
       flex-shrink: 0;
-      border: 2px solid var(--gold);
     }
     .timeline-content h3 {
       font-size: 1.15rem;
-      color: var(--navy);
       margin-bottom: 0.35rem;
       display: flex;
       align-items: center;
@@ -645,23 +818,20 @@
       flex-wrap: wrap;
     }
     .timeline-phase-tag {
-      font-size: 0.75rem;
-      background: var(--teal-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
       color: var(--teal);
       padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-weight: 600;
+      border-radius: 999px;
     }
     .timeline-content p {
       color: var(--text-muted);
-      font-size: 0.93rem;
-      line-height: 1.55;
+      font-size: 0.95rem;
     }
 
-    /* 8. PREVIEW MOCKUPS & GALLERY */
-    #preview-mockups {
-      background-color: #ffffff;
-    }
+    /* 8. PREVIEW GALLERY */
     .preview-gallery-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -701,10 +871,6 @@
       color: var(--navy);
       margin-bottom: 0.25rem;
     }
-    .preview-hero-showcase {
-      max-width: 860px;
-      margin: 0 auto;
-    }
     .mockup-img-btn {
       background: none;
       border: none;
@@ -734,29 +900,26 @@
       background-color: var(--bg-soft);
       transition: transform 0.35s ease;
     }
-    .mockup-img-btn:hover .preview-main-img,
-    .mockup-img-btn:focus-visible .preview-main-img {
+    .mockup-img-btn:hover .preview-main-img {
       transform: scale(1.02);
     }
     .mockup-zoom-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(21, 34, 56, 0.45);
+      background: rgba(15, 28, 46, 0.45);
       backdrop-filter: blur(2px);
       -webkit-backdrop-filter: blur(2px);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
       font-size: 0.95rem;
       font-weight: 700;
       opacity: 0;
       transition: opacity 0.2s ease;
       pointer-events: none;
     }
-    .mockup-img-btn:hover .mockup-zoom-overlay,
-    .mockup-img-btn:focus-visible .mockup-zoom-overlay {
+    .mockup-img-btn:hover .mockup-zoom-overlay {
       opacity: 1;
     }
     .mockup-zoom-badge {
@@ -771,37 +934,32 @@
     }
 
     /* 9. TESTIMONIALS */
-    #testimonials {
-      background-color: var(--bg-soft);
-    }
     .testimonials-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
-      margin-top: 1rem;
     }
     .testimonial-card {
       background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 1.75rem;
-      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: var(--shadow-sm);
     }
     .testimonial-stars {
       color: #eab308;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
       letter-spacing: 2px;
+      margin-bottom: 0.75rem;
     }
     .testimonial-text {
+      font-size: 0.98rem;
       color: var(--text-main);
-      font-size: 0.95rem;
       font-style: italic;
+      margin-bottom: 1.5rem;
       line-height: 1.6;
-      margin-bottom: 1.25rem;
     }
     .testimonial-author {
       display: flex;
@@ -813,20 +971,18 @@
     .author-avatar {
       width: 40px;
       height: 40px;
-      background: var(--navy-light);
-      color: #ffffff;
-      font-weight: 700;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      font-size: 0.9rem;
-      flex-shrink: 0;
+      font-weight: 700;
+      font-size: 0.85rem;
     }
     .author-info h4 {
-      font-size: 0.92rem;
-      color: var(--navy);
-      margin-bottom: 0.15rem;
+      font-size: 0.95rem;
+      line-height: 1.2;
     }
     .author-role {
       font-size: 0.8rem;
@@ -834,58 +990,41 @@
     }
 
     /* 10. GUARANTEE BOX */
-    #guarantee {
-      background-color: #ffffff;
-      padding: 3.5rem 0;
-    }
     .guarantee-card {
-      border: 2px dashed var(--teal);
-      background: var(--teal-light);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem 1.75rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .guarantee-icon-wrap {
-      width: 56px;
-      height: 56px;
       background: #ffffff;
-      border: 2px solid var(--teal);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      margin: 0 auto 1.25rem;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
       box-shadow: var(--shadow-sm);
     }
+    .guarantee-icon-wrap {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
     .guarantee-card h2 {
-      font-size: 1.5rem;
       margin-bottom: 0.75rem;
     }
     .guarantee-card p {
-      color: var(--text-main);
-      font-size: 0.98rem;
-      line-height: 1.65;
-      max-width: 660px;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 640px;
       margin: 0 auto;
     }
 
     /* 11. PRICING SECTION */
-    #pricing {
-      background-color: var(--bg-soft);
-      padding: 4.5rem 0;
-    }
     .pricing-card {
       background: #ffffff;
       border: 2px solid var(--gold);
       border-radius: var(--radius-lg);
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 1.75rem;
       max-width: 580px;
       margin: 0 auto;
-      box-shadow: var(--shadow-lg);
       text-align: center;
+      box-shadow: var(--shadow-lg);
       position: relative;
     }
     .pricing-ribbon {
@@ -893,42 +1032,38 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--gold);
-      color: #152238;
-      font-size: 0.78rem;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 0.8rem;
       font-weight: 800;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.35rem 1.25rem;
+      padding: 0.35rem 1.15rem;
       border-radius: 999px;
-      box-shadow: 0 2px 8px rgba(212, 164, 55, 0.4);
+      box-shadow: 0 2px 8px rgba(15, 28, 46, 0.2);
     }
     .pricing-title {
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
+      font-size: 1.65rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.35rem;
     }
     .pricing-subtitle {
+      font-size: 0.95rem;
       color: var(--text-muted);
-      font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
     .pricing-product-img-wrap {
-      max-width: 480px;
+      max-width: 320px;
       margin: 0 auto 1.5rem;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
       background: var(--bg-soft);
-      transition: transform 0.2s ease;
+      border-radius: var(--radius-md);
+      padding: 0.5rem;
+      border: 1px solid var(--border-color);
     }
     .pricing-presentation-img {
       width: 100%;
       height: auto;
-      object-fit: contain;
-      display: block;
-      background-color: var(--bg-soft);
+      border-radius: var(--radius-sm);
     }
     .price-display {
       display: flex;
@@ -938,246 +1073,381 @@
       margin-bottom: 1.75rem;
     }
     .price-original {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       color: var(--text-light);
       text-decoration: line-through;
-      font-weight: 500;
     }
     .price-current {
       font-size: 3.25rem;
       font-weight: 800;
       color: var(--navy);
       line-height: 1;
+      display: flex;
+      align-items: flex-start;
     }
     .price-currency {
       font-size: 1.75rem;
-      font-weight: 700;
-      vertical-align: super;
-      margin-right: 2px;
+      margin-top: 0.2rem;
     }
     .price-badge {
-      background: #ecfdf5;
-      color: #047857;
-      font-size: 0.8rem;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-size: 0.82rem;
       font-weight: 700;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      align-self: center;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
     }
     .pricing-inclusions {
       list-style: none;
       text-align: left;
-      margin: 1.75rem 0 2.25rem;
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
-      background: var(--bg-soft);
-      padding: 1.25rem 1.25rem;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-color);
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.25rem 0;
+      font-size: 0.92rem;
     }
     .pricing-inclusions li {
       display: flex;
       align-items: flex-start;
       gap: 0.65rem;
-      font-size: 0.92rem;
-      color: var(--text-main);
+      color: var(--text-muted);
     }
     .pricing-inclusions .check {
-      color: #059669;
+      color: var(--teal);
       font-weight: bold;
-      flex-shrink: 0;
     }
-
-    /* PAYMENT BUTTONS */
-    .payment-buttons-stack {
+    .pricing-checkout-actions {
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
-      width: 100%;
+      gap: 0.75rem;
     }
-    .btn-paypal {
+    .btn-checkout-primary {
+      display: block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 1.15rem;
+      font-weight: 800;
+      padding: 1.1rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 14px rgba(212, 164, 55, 0.4);
+      transition: all 0.2s ease;
+    }
+    .btn-checkout-primary:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 164, 55, 0.5);
+    }
+    .btn-checkout-paypal {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      background-color: var(--paypal-yellow);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 1.08rem;
-      padding: 0.95rem 1.5rem;
+      background: var(--paypal-yellow);
+      color: #003087;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 0.95rem;
       border-radius: var(--radius-md);
-      box-shadow: 0 4px 12px rgba(255, 196, 57, 0.35);
       transition: all 0.2s ease;
-      cursor: pointer;
-      border: 1px solid #ebae26;
-      width: 100%;
     }
-    .btn-paypal:hover {
-      background-color: var(--paypal-yellow-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255, 196, 57, 0.45);
-    }
-    .btn-paypal-text {
-      font-style: italic;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-    .btn-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background-color: var(--navy);
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 1.02rem;
-      padding: 0.95rem 1.5rem;
-      border-radius: var(--radius-md);
-      box-shadow: 0 4px 12px rgba(21, 34, 56, 0.25);
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: 1px solid var(--navy-dark);
-      width: 100%;
-    }
-    .btn-card:hover {
-      background-color: var(--navy-light);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(21, 34, 56, 0.35);
-    }
-    .pricing-security-note {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin-top: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
+    .btn-checkout-paypal:hover {
+      background: var(--paypal-yellow-hover);
+      transform: translateY(-1px);
     }
 
-    /* 12. FAQ SECTION */
-    #faq {
-      background-color: #ffffff;
-    }
-    .faq-accordion-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
+    /* 12. FAQ ACCORDION */
+    .faq-accordion {
       max-width: 760px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     .faq-item {
+      background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      background: #ffffff;
       overflow: hidden;
-      transition: border-color 0.2s ease;
-    }
-    .faq-item:hover {
-      border-color: #cbd5e1;
+      box-shadow: var(--shadow-sm);
     }
     .faq-question {
       width: 100%;
       text-align: left;
+      padding: 1.25rem 1.5rem;
       background: none;
       border: none;
-      padding: 1.25rem 1.5rem;
       font-size: 1.05rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--navy);
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      cursor: pointer;
+      justify-content: space-between;
       gap: 1rem;
+      cursor: pointer;
     }
     .faq-icon {
       font-size: 1.25rem;
-      color: var(--teal);
-      transition: transform 0.2s ease;
-      font-weight: 700;
-      line-height: 1;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      padding: 0 1.5rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding: 0 1.5rem 1.25rem;
+      color: var(--text-light);
+      transition: transform 0.25s ease;
     }
     .faq-item.active .faq-icon {
       transform: rotate(45deg);
+      color: var(--gold-hover);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
     }
 
     /* 13. FINAL CTA SECTION */
     #final-cta {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1a2f4c 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
       color: #ffffff;
       text-align: center;
       padding: 5rem 0;
     }
     #final-cta h2 {
       color: #ffffff;
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
     #final-cta p {
       color: #cbd5e1;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       max-width: 680px;
-      margin: 0 auto 2.25rem;
-      line-height: 1.6;
+      margin: 0 auto 2.5rem;
     }
     .final-cta-btn {
       display: inline-block;
-      background: linear-gradient(135deg, var(--gold) 0%, #c59325 100%);
-      color: #152238;
-      font-size: 1.15rem;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 1.2rem;
       font-weight: 800;
-      padding: 1.1rem 2.5rem;
+      padding: 1.15rem 2.5rem;
       border-radius: var(--radius-md);
-      box-shadow: 0 6px 25px rgba(212, 164, 55, 0.4);
+      box-shadow: 0 4px 16px rgba(212, 164, 55, 0.4);
       transition: all 0.2s ease;
-      cursor: pointer;
-      border: none;
-      width: 100%;
-      max-width: 480px;
     }
     .final-cta-btn:hover {
-      background: linear-gradient(135deg, #e5b94a 0%, var(--gold) 100%);
+      background: var(--gold-hover);
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(212, 164, 55, 0.5);
+      box-shadow: 0 6px 22px rgba(212, 164, 55, 0.5);
+    }
+
+    /* SUB-PAGES / DEDICATED VIEWS STYLING */
+    .page-hero {
+      background: linear-gradient(180deg, #f8fafd 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    .page-hero-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      background: var(--teal-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+    .page-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Content Cards for Static Pages */
+    .content-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+    .content-box h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.65rem;
+    }
+    .content-box h3 {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .content-box p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .content-box ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+    }
+    .content-box li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    /* Contact Form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--navy);
+      background: #ffffff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 164, 55, 0.2);
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .contact-info-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+    .contact-info-icon {
+      font-size: 1.25rem;
+      color: var(--teal);
     }
 
     /* 14. FOOTER */
     footer {
-      background-color: var(--navy-dark);
-      color: #94a3b8;
-      padding: 2.5rem 0 3.5rem;
-      font-size: 0.85rem;
+      background: var(--navy-dark);
+      color: #cbd5e1;
+      padding: 4.5rem 0 2.5rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
     }
-    .footer-content {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 960px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 2.5rem;
+      }
+    }
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .footer-tagline {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .footer-col-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.15rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .footer-link {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
+    }
+    .footer-link:hover {
+      color: var(--gold);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      justify-content: space-between;
       gap: 1rem;
-    }
-    .footer-title {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 1rem;
-    }
-    .footer-note {
+      font-size: 0.85rem;
       color: #64748b;
-      font-size: 0.82rem;
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        text-align: left;
+      }
     }
 
     /* STICKY MOBILE BAR */
@@ -1186,45 +1456,42 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(21, 34, 56, 0.97);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: #ffffff;
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
       padding: 0.75rem 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      z-index: 999;
+      box-shadow: 0 -4px 16px rgba(15, 28, 46, 0.1);
+      z-index: 980;
       transform: translateY(100%);
-      transition: transform 0.3s ease-in-out;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     #sticky-bar.visible {
       transform: translateY(0);
     }
     .sticky-bar-inner {
-      max-width: 1040px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.75rem;
+      max-width: 1040px;
+      margin: 0 auto;
+      gap: 0.85rem;
     }
     .sticky-info {
       display: flex;
       flex-direction: column;
     }
     .sticky-title {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--navy);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 180px;
+      max-width: 150px;
     }
     .sticky-price {
-      font-size: 0.82rem;
-      color: var(--gold);
-      font-weight: 700;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal-dark);
     }
     .sticky-actions {
       display: flex;
@@ -1233,154 +1500,99 @@
     }
     .btn-sticky-paypal {
       background: var(--paypal-yellow);
-      color: var(--navy);
-      font-size: 0.82rem;
+      color: #003087;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 0.5rem 0.85rem;
+      padding: 0.6rem 0.85rem;
       border-radius: var(--radius-sm);
       white-space: nowrap;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
     }
     .btn-sticky-card {
-      background: #ffffff;
-      color: var(--navy);
-      font-size: 0.82rem;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 0.5rem 0.85rem;
+      padding: 0.6rem 1rem;
       border-radius: var(--radius-sm);
       white-space: nowrap;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
     }
 
     /* LIGHTBOX MODAL */
     .lightbox-modal {
+      display: none;
       position: fixed;
       inset: 0;
-      background-color: rgba(13, 22, 36, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 10000;
-      display: flex;
+      background: rgba(15, 28, 46, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1000;
       align-items: center;
       justify-content: center;
-      padding: 1.25rem;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
+      padding: 1.5rem;
     }
     .lightbox-modal.active {
-      opacity: 1;
-      visibility: visible;
+      display: flex;
     }
     .lightbox-container {
       position: relative;
-      max-width: 860px;
+      max-width: 900px;
       width: 100%;
-      max-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       background: #ffffff;
       border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
-      transform: scale(0.94);
-      transition: transform 0.25s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .lightbox-modal.active .lightbox-container {
-      transform: scale(1);
+      padding: 1rem;
+      box-shadow: var(--shadow-lg);
     }
     .lightbox-close-btn {
       position: absolute;
-      top: 0.85rem;
-      right: 0.85rem;
-      background: rgba(21, 34, 56, 0.85);
+      top: -14px;
+      right: -14px;
+      background: var(--navy);
       color: #ffffff;
-      border: none;
-      width: 38px;
-      height: 38px;
+      border: 2px solid #ffffff;
       border-radius: 50%;
-      font-size: 1.3rem;
+      width: 36px;
+      height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.1rem;
+      font-weight: bold;
       cursor: pointer;
-      z-index: 10;
-      transition: background 0.2s ease, transform 0.2s ease;
-      line-height: 1;
-    }
-    .lightbox-close-btn:hover {
-      background: var(--navy);
-      transform: scale(1.1);
+      box-shadow: var(--shadow-md);
     }
     .lightbox-img-wrap {
       width: 100%;
-      max-height: 72vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bg-soft);
+      max-height: 80vh;
       overflow: auto;
-      padding: 1rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-soft);
     }
     .lightbox-img {
-      max-width: 100%;
-      max-height: 68vh;
-      object-fit: contain;
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
-      background-color: var(--bg-soft);
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .lightbox-caption {
-      width: 100%;
-      padding: 1rem 1.5rem;
-      background: #ffffff;
-      border-top: 1px solid var(--border-color);
-      font-size: 0.95rem;
-      color: var(--navy);
-      font-weight: 600;
       text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      padding: 0.75rem 0.5rem 0.25rem;
     }
 
-    /* RESPONSIVE MEDIA QUERIES (DESKTOP ENHANCEMENTS) */
+    /* RESPONSIVE MEDIA QUERIES */
     @media (min-width: 640px) {
-      h1 {
-        font-size: 2.75rem;
-      }
-      h2 {
-        font-size: 2.2rem;
-      }
-      .problem-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .bonus-tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .sticky-title {
-        max-width: 320px;
-        font-size: 0.95rem;
-      }
+      h1 { font-size: 2.75rem; }
+      h2 { font-size: 2.2rem; }
+      .problem-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+      .bonus-tools-grid { grid-template-columns: repeat(2, 1fr); }
+      .sticky-title { max-width: 320px; font-size: 0.95rem; }
     }
     @media (min-width: 768px) {
-      section {
-        padding: 5.5rem 0;
-      }
-      .inside-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .hero-product-preview {
-        padding: 1.5rem;
-      }
+      section { padding: 5.5rem 0; }
+      .inside-grid { grid-template-columns: 1fr 1fr; }
+      .hero-product-preview { padding: 1.5rem; }
     }
     @media (min-width: 960px) {
       .hero-layout-grid {
@@ -1410,28 +1622,79 @@
     <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=925871916596017&ev=PageView&noscript=1" />
   </noscript>
 
-  <!-- 1. TRUST BAR -->
-  <header id="trust-bar">
+  <!-- 1. TOP ANNOUNCEMENT & TRUST BAR -->
+  <aside id="top-trust-bar" aria-label="Announcement and Security Bar">
     <div class="container">
-      <div class="trust-bar-text">
-        <span>🔒 Secure Checkout</span>
+      <div class="top-bar-inner">
+        <span>🔒 <span class="top-bar-highlight">SELF CLARITY SYSTEM</span> Official Store</span>
         <span>•</span>
-        <span>💳 PayPal & All Major Cards</span>
+        <span>⚡ Instant Digital Download</span>
         <span>•</span>
-        <span>⚡ Instant PDF Delivery</span>
+        <span>🛡️ 30-Day Satisfaction Guarantee</span>
       </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN SITE HEADER -->
+  <header id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Logo -->
+        <a href="/" data-route="/" class="brand-logo-wrap" id="brand-header-link" aria-label="SELF CLARITY SYSTEM Home">
+          <div class="brand-logo-icon">S</div>
+          <div class="brand-logo-text-group">
+            <span class="brand-title">SELF CLARITY SYSTEM</span>
+            <span class="brand-tagline-sub">Practical digital tools for clearer thinking & action</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="site-nav" id="desktop-nav" aria-label="Main Navigation">
+          <a href="/" data-route="/" class="nav-link active" id="nav-home">Home</a>
+          <a href="/know-yourself" data-route="/know-yourself" class="nav-link" id="nav-shop">Shop</a>
+          <a href="/about" data-route="/about" class="nav-link" id="nav-about">About</a>
+          <a href="/contact" data-route="/contact" class="nav-link" id="nav-contact">Contact</a>
+          <a href="/faq" data-route="/faq" class="nav-link" id="nav-faq">FAQ</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="/know-yourself" data-route="/know-yourself" class="btn-header-cta" id="header-primary-cta">
+            <span>Get Know Yourself</span>
+          </a>
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="/" data-route="/" class="mobile-nav-link active">Home</a></li>
+        <li><a href="/know-yourself" data-route="/know-yourself" class="mobile-nav-link">Shop (Know Yourself)</a></li>
+        <li><a href="/about" data-route="/about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="/contact" data-route="/contact" class="mobile-nav-link">Contact & Support</a></li>
+        <li><a href="/faq" data-route="/faq" class="mobile-nav-link">FAQ</a></li>
+      </ul>
     </div>
   </header>
 
-  <main>
-    <!-- 2. HERO SECTION -->
+  <!-- ========================================================= -->
+  <!-- VIEW 1: HOME & PRODUCT PAGE (ROUTE: / & /know-yourself)    -->
+  <!-- ========================================================= -->
+  <main id="view-product" class="site-view active-view">
+    <!-- HERO SECTION -->
     <section id="hero">
       <div class="container">
         <div class="hero-layout-grid">
           <!-- Left: Headline, Value Proposition & CTA -->
           <div class="hero-wrapper">
             <div class="hero-badge">
-              By Azddine • Digital Self-Development System
+              SELF CLARITY SYSTEM • Flagship Digital Framework
             </div>
             <h1>Know Yourself — Stop Feeling Lost. Start Living On Purpose.</h1>
             <p class="hero-subtext">Know Yourself is a complete self-development book and workbook to help you stop feeling lost, discover your core values, and build a real 90-day life plan. Instant PDF download.</p>
@@ -1456,7 +1719,7 @@
           <div class="hero-media-wrapper">
             <div class="hero-cover-wrap" id="hero-cover-card">
               <!-- IMAGE 1: Hero Main Workbook Image -->
-              <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" alt="Know Yourself complete self-development workbook held beside a desk with coffee" class="hero-cover-img" width="460" height="580" loading="eager" decoding="async" referrerpolicy="no-referrer">
+              <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" alt="Know Yourself complete self-development workbook" class="hero-cover-img" width="460" height="580" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
             </div>
 
             <div class="hero-product-preview" id="hero-book-preview">
@@ -1491,7 +1754,7 @@
       </div>
     </section>
 
-    <!-- 3. PROBLEM SECTION -->
+    <!-- PROBLEM SECTION -->
     <section id="problem">
       <div class="container">
         <h2>Why Most People Stay Stuck in the Fog</h2>
@@ -1519,23 +1782,23 @@
       </div>
     </section>
 
-    <!-- 4. TRANSFORMATION SECTION (IMAGE 2) -->
+    <!-- TRANSFORMATION SECTION (IMAGE 2) -->
     <section id="transformation">
       <div class="container container-narrow">
-        <h2>See the Direction You Can Build</h2>
+        <h2>The Transformation — See Where You Can Be</h2>
         <p class="section-subtitle">Move from scattered effort and uncertainty toward clearer priorities, stronger habits, and a practical 90-day plan.</p>
         
         <div class="transformation-card" id="transformation-showcase">
           <!-- IMAGE 2: Transformation Before / After Image -->
-          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_03_35%20PM.png" alt="Imagine your life after finishing this workbook - Before and After transformation guide" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_03_35%20PM.png" alt="Know Yourself life transformation workbook" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
         </div>
       </div>
     </section>
 
-    <!-- 5. WHAT'S INSIDE SECTION (IMAGE 3) -->
+    <!-- WHAT'S INSIDE SECTION (IMAGE 3) -->
     <section id="whats-inside" class="bg-soft">
       <div class="container">
-        <h2>What's Inside the Complete System</h2>
+        <h2>Inside the Complete Edition</h2>
         <p class="section-subtitle">A concise, 31-page, high-density system designed for instant execution — zero fluff, zero filler.</p>
 
         <div class="inside-grid">
@@ -1611,12 +1874,12 @@
         <!-- Inside System Visual Overview (IMAGE 3) -->
         <div class="inside-visual-banner" id="inside-visual-showcase">
           <!-- IMAGE 3: Book and Workbook Content Image -->
-          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_09_25%20PM.png" alt="Everything you need in one workbook - Life Audit, Values, Strengths, Decision Matrix, and 90-day plan" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500" referrerpolicy="no-referrer">
+          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_09_25%20PM.png" alt="Know Yourself workbook exercises and life blueprint" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
         </div>
       </div>
     </section>
 
-    <!-- 6. BONUS SECTION -->
+    <!-- BONUS SECTION -->
     <section id="bonus">
       <div class="container container-narrow">
         <div class="bonus-box" id="bonus-card">
@@ -1672,7 +1935,7 @@
       </div>
     </section>
 
-    <!-- 7. CHAPTERS TIMELINE -->
+    <!-- CHAPTERS TIMELINE -->
     <section id="timeline" class="bg-soft">
       <div class="container">
         <h2>The 5-Part Transformation Journey</h2>
@@ -1722,18 +1985,18 @@
       </div>
     </section>
 
-    <!-- 8. REAL PRODUCT PREVIEW & GALLERY (IMAGES 4 & 5 WITH LIGHTBOX) -->
+    <!-- REAL PRODUCT PREVIEW & GALLERY (IMAGES 4 & 5 WITH LIGHTBOX) -->
     <section id="preview-mockups">
       <div class="container">
-        <h2>Look Inside the Complete Edition</h2>
+        <h2>Real Product Preview</h2>
         <p class="section-subtitle">Real, structured, clean templates ready for digital use on tablet/laptop or standard printing.</p>
 
         <div class="preview-gallery-grid" id="product-preview-gallery">
           <!-- IMAGE 4: Complete Edition Main Preview -->
           <div class="preview-gallery-item" id="gallery-item-complete">
-            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" data-caption="Know Yourself Complete Edition: 11-Chapter Theoretical Book & 5-Chapter Practical Workbook with 90-Day Plan." aria-label="Open full preview of Complete Edition pages">
+            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" data-caption="Know Yourself Complete Edition product preview" aria-label="Open full preview of Complete Edition pages">
               <div class="preview-main-wrap">
-                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" alt="Know Yourself Complete Edition Theoretical Book and Practical Workbook 11 chapters and 90-day plan overview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" alt="Know Yourself Complete Edition product preview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
                 </div>
@@ -1747,9 +2010,9 @@
 
           <!-- IMAGE 5: Secondary Gallery Preview -->
           <div class="preview-gallery-item" id="gallery-item-premium">
-            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" data-caption="Know Yourself Premium Workbook and Life Blueprint compass edition with exercises." aria-label="Open full preview of Premium Workbook edition">
+            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" data-caption="Know Yourself digital workbook preview" aria-label="Open full preview of Premium Workbook edition">
               <div class="preview-main-wrap">
-                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" alt="Know Yourself Premium Workbook and Life Blueprint compass edition" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" alt="Know Yourself digital workbook preview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
                 </div>
@@ -1764,7 +2027,7 @@
       </div>
     </section>
 
-    <!-- 9. TESTIMONIALS -->
+    <!-- TESTIMONIALS -->
     <section id="testimonials" class="bg-soft">
       <div class="container">
         <h2>What Readers Are Saying</h2>
@@ -1816,7 +2079,7 @@
       </div>
     </section>
 
-    <!-- 10. GUARANTEE BOX -->
+    <!-- GUARANTEE BOX -->
     <section id="guarantee">
       <div class="container">
         <div class="guarantee-card" id="guarantee-box">
@@ -1824,12 +2087,12 @@
             🛡️
           </div>
           <h2>Instant Access, Zero Risk</h2>
-          <p>Download <em>Know Yourself</em> today, explore the 11 theoretical chapters, and test the 5-chapter practical workbook with your own life. If you do not feel a profound surge of clarity and walk away with a concrete, customized 90-day life plan, simply reach out. We built this system to create real-world breakthroughs, and we stand by every page with complete confidence.</p>
+          <p>Download <em>Know Yourself</em> today, explore the 11 theoretical chapters, and test the 5-chapter practical workbook with your own life. If you do not feel a profound surge of clarity and walk away with a concrete, customized 90-day life plan, simply reach out within 30 days. We built this system to create real-world breakthroughs, and we stand by every page with complete confidence.</p>
         </div>
       </div>
     </section>
 
-    <!-- 11. PRICING CARD (IMAGE 6) -->
+    <!-- PRICING CARD (IMAGE 6) -->
     <section id="pricing" class="bg-soft">
       <div class="container">
         <div class="pricing-card" id="pricing-card">
@@ -1839,7 +2102,7 @@
           
           <!-- IMAGE 6: Pricing Card / Product Presentation Image -->
           <div class="pricing-product-img-wrap" id="pricing-presentation-block">
-            <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000ea5c7243bb227fa706842070_043731%20%281%29.png" alt="Know Yourself Complete Edition theoretical book and practical workbook digital presentation for $27" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000ea5c7243bb227fa706842070_043731%20%281%29.png" alt="Know Yourself Complete Edition digital product" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
           </div>
 
           <div class="price-display">
@@ -1865,74 +2128,76 @@
             </li>
             <li>
               <span class="check">✓</span>
-              <span><strong>Digital & Print Ready:</strong> 31 High-Density, Fillable Pages</span>
+              <span><strong>Digital & Print Formats:</strong> Interactive tablet PDF & print-friendly versions</span>
             </li>
             <li>
               <span class="check">✓</span>
-              <span><strong>Instant Inbox Delivery:</strong> Lifetime Access & Free Updates</span>
+              <span><strong>Lifetime Access & Updates:</strong> Instant download + future updates included</span>
             </li>
           </ul>
 
-          <div class="payment-buttons-stack">
-            <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="btn-paypal" id="pricing-paypal-btn">
-              <span>Pay with</span> <span class="btn-paypal-text">PayPal</span>
+          <div class="pricing-checkout-actions">
+            <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="btn-checkout-primary" id="pricing-card-checkout-btn">
+              Download Know Yourself Now — $27
             </a>
-            <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="btn-card" id="pricing-card-btn">
-              <span>💳 Pay with Debit or Credit Card</span>
+            <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1" onclick="fbq('track', 'InitiateCheckout');" class="btn-checkout-paypal" id="pricing-paypal-checkout-btn">
+              <span>Pay with</span> <strong>PayPal</strong>
             </a>
           </div>
 
-          <div class="pricing-security-note">
-            <span>🔒 256-Bit SSL Encrypted Payment • Instant PDF Download</span>
+          <div class="hero-guarantee-micro" style="margin-top: 1.25rem;">
+            <span>🛡️ 30-Day Money-Back Guarantee</span>
+            <span>•</span>
+            <span>⚡ 256-Bit SSL Encrypted</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 12. FAQ SECTION -->
+    <!-- FAQ SECTION -->
     <section id="faq">
-      <div class="container container-narrow">
+      <div class="container">
         <h2>Frequently Asked Questions</h2>
         <p class="section-subtitle">Everything you need to know about the format, delivery, and guarantee.</p>
 
-        <div class="faq-accordion-list" id="faq-list">
+        <div class="faq-accordion">
           <div class="faq-item" id="faq-1">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>What format is the book and workbook delivered in?</span>
+              <span>What format will I receive the system in?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>The entire package is delivered as an instant digital PDF download (31 high-impact pages). It is optimized for reading and filling out on smartphones, tablets, laptops, e-readers (via PDF annotator apps), or standard desktop computers.</p>
+              <p>You will receive high-resolution, universal PDF files. You can use them digitally on iPad/tablet with apps like GoodNotes, Notability, or Apple Books, fill them out on your laptop/desktop, or print physical copies.</p>
             </div>
           </div>
 
           <div class="faq-item" id="faq-2">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can I print the workbook and worksheets?</span>
+              <span>How is this different from typical self-help books?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>Yes! The PDF is formatted with clean typography, high-contrast layouts, and generous margins designed specifically for standard US Letter or A4 printing if you prefer writing by hand.</p>
+              <p>Most self-help books are 300+ pages of repetitive theory with zero follow-through structure. <em>Know Yourself</em> is engineered as a high-density 31-page system divided into an actionable book, a 90-day practical workbook, and a 10-tool reset toolkit designed for immediate real-world execution.</p>
             </div>
           </div>
 
           <div class="faq-item" id="faq-3">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>What payment methods are accepted?</span>
+              <span>How long will it take to complete the workbook?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>We accept PayPal as well as all major credit and debit cards (Visa, MasterCard, American Express, Discover). All transactions are encrypted and processed securely via Payhip's PCI-compliant infrastructure.</p>
+              <p>The initial Life Audit and Core Values Matrix can be completed in a single focused afternoon (2 to 3 hours). The 90-Day Action Plan and habit tracking system are designed to be used in simple 5-to-10-minute daily checkpoints.</p>
             </div>
           </div>
 
           <div class="faq-item" id="faq-4">
             <button class="faq-question" type="button" aria-expanded="false">
-              <span>How long does the 90-day program take each day?</span>
+              <span>Is this a physical product or a digital download?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>The system is engineered for busy people. The initial book reading and Life Audit take approximately 1 to 2 hours. After setting up your 90-day blueprint, the daily habit tracker and evening reflections require only 10 to 15 minutes per day.</p>
+              <p>This is a 100% digital product. You get instant lifetime access immediately after checkout without waiting for shipping or paying delivery fees.</p>
             </div>
           </div>
 
@@ -1952,14 +2217,14 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>We provide a 100% peace-of-mind guarantee. If you go through the material, complete the worksheets, and honestly feel it did not provide clarity and direction, contact us and we will ensure you are taken care of.</p>
+              <p>We provide a 100% peace-of-mind 30-day guarantee. If you go through the material, complete the worksheets, and honestly feel it did not provide clarity and direction, contact us at support@selfclaritysystem.online and we will ensure you are taken care of.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 13. FINAL CTA SECTION -->
+    <!-- FINAL CTA SECTION -->
     <section id="final-cta">
       <div class="container">
         <h2>Your Life Won't Change Until Your Blueprint Does</h2>
@@ -1972,18 +2237,433 @@
     </section>
   </main>
 
-  <!-- 14. FOOTER -->
+  <!-- ========================================================= -->
+  <!-- VIEW 2: ABOUT PAGE (ROUTE: /about)                        -->
+  <!-- ========================================================= -->
+  <main id="view-about" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">About Self Clarity System</span>
+        <h1>Engineering Clarity in an Era of Noise</h1>
+        <p>Practical digital tools for clearer thinking, aligned action, and meaningful progress.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container container-narrow">
+        <div class="content-box">
+          <h2>Our Core Philosophy</h2>
+          <p>Modern life does not suffer from a lack of information; it suffers from a lack of clarity. Everywhere you look, you are inundated with advice, hacks, algorithms, and conflicting expectations. The result is mental overload, endless overthinking, and feeling disconnected from what actually matters to you.</p>
+          <p><strong>SELF CLARITY SYSTEM</strong> was founded on a simple premise: real transformation doesn't come from consuming more theoretical self-help books—it comes from having a structured, battle-tested system to audit your life, clarify your core priorities, and execute consistently.</p>
+        </div>
+
+        <div class="content-box">
+          <h2>The 3 Pillars of Our Framework</h2>
+          <div style="display: grid; gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="background: var(--bg-soft); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--gold);">
+              <h3 style="margin-top: 0; color: var(--navy);">1. Clarity Over Complexity</h3>
+              <p style="margin-bottom: 0;">We distill deep psychological principles and self-inquiry frameworks into concise, high-density formats that respect your time. Zero fluff, zero filler.</p>
+            </div>
+            <div style="background: var(--bg-soft); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--teal);">
+              <h3 style="margin-top: 0; color: var(--navy);">2. Action Over Endless Theory</h3>
+              <p style="margin-bottom: 0;">Insight without action is just entertainment. Every principle in our tools is paired with immediate reflection questions, practical worksheets, and 24-hour challenges.</p>
+            </div>
+            <div style="background: var(--bg-soft); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--navy);">
+              <h3 style="margin-top: 0; color: var(--navy);">3. Systems Over Fleeting Motivation</h3>
+              <p style="margin-bottom: 0;">Motivation is emotional and temporary. Systems are reliable and permanent. We build 90-day action architectures and habit loops that carry you through low-energy days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box" style="text-align: center; background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%); border: 2px solid var(--gold-border);">
+          <h2 style="text-align: center;">Ready to Experience the Difference?</h2>
+          <p>Explore our flagship complete digital system and take the first step toward living with intention and clarity.</p>
+          <a href="/know-yourself" data-route="/know-yourself" class="cta-btn-primary" style="margin: 1.25rem auto 0; display: inline-block;">
+            Explore Know Yourself — $27
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 3: CONTACT PAGE (ROUTE: /contact)                    -->
+  <!-- ========================================================= -->
+  <main id="view-contact" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">Customer Support</span>
+        <h1>We're Here to Help You</h1>
+        <p>Have questions about your order, downloads, or our digital tools? Reach out to our dedicated support team.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Form -->
+          <div class="content-box" style="margin-bottom: 0;">
+            <h2>Send Us a Message</h2>
+            <form id="contact-support-form" onsubmit="event.preventDefault(); document.getElementById('contact-success-msg').style.display='block'; this.reset();">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Your Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Inquiry Type</label>
+                <select id="contact-subject" class="form-select">
+                  <option value="order">Order & Download Support</option>
+                  <option value="product">Product Question (Know Yourself)</option>
+                  <option value="refund">Refund Request (30-Day Guarantee)</option>
+                  <option value="general">General Feedback / Partnership</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-order-id">Payhip Order ID (Optional)</label>
+                <input type="text" id="contact-order-id" class="form-input" placeholder="e.g. PH-XXXX-XXXX">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">How can we help you?</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Provide details so we can assist you quickly..." required></textarea>
+              </div>
+
+              <button type="submit" class="cta-btn-primary" style="width: 100%; border: none;">
+                Send Message
+              </button>
+
+              <div id="contact-success-msg" style="display: none; margin-top: 1.25rem; padding: 1rem; background: var(--teal-light); border: 1px solid var(--teal); border-radius: var(--radius-sm); color: var(--teal-dark); font-weight: 600; font-size: 0.95rem;">
+                ✓ Thank you! Your message has been received. Our support team will reply to your email within 24 business hours.
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar Info -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="contact-info-card">
+              <h3 style="margin-top: 0; margin-bottom: 1.25rem; font-size: 1.15rem; color: var(--navy);">Direct Support Channels</h3>
+              
+              <div class="contact-info-item">
+                <span class="contact-info-icon">✉️</span>
+                <div>
+                  <strong>Email Support</strong>
+                  <p style="margin: 0.2rem 0 0; font-size: 0.92rem; color: var(--text-muted);">
+                    <a href="mailto:support@selfclaritysystem.online" style="color: var(--teal); font-weight: 600;">support@selfclaritysystem.online</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-icon">🌐</span>
+                <div>
+                  <strong>Official Website</strong>
+                  <p style="margin: 0.2rem 0 0; font-size: 0.92rem; color: var(--text-muted);">
+                    <a href="https://selfclaritysystem.online" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">selfclaritysystem.online</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-icon">⏱️</span>
+                <div>
+                  <strong>Response Time</strong>
+                  <p style="margin: 0.2rem 0 0; font-size: 0.92rem; color: var(--text-muted);">
+                    Within 24 business hours (Monday – Friday).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card" style="background: #ffffff;">
+              <h3 style="margin-top: 0; margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--navy);">Lost Download Link?</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem;">
+                Your download link is sent immediately via Payhip to the email address used during purchase. If you don't see it, please check your Spam/Junk folder or send us your email to resend your link.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 4: FAQ PAGE (ROUTE: /faq)                            -->
+  <!-- ========================================================= -->
+  <main id="view-faq" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">Help Center & FAQ</span>
+        <h1>Frequently Asked Questions</h1>
+        <p>Find instant answers regarding orders, formats, digital compatibility, and our satisfaction guarantee.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container container-narrow">
+        <div class="content-box">
+          <h2>1. Product & System Overview</h2>
+          <div class="faq-accordion" style="margin-top: 1rem;">
+            <div class="faq-item active">
+              <button class="faq-question" type="button">
+                <span>What is the SELF CLARITY SYSTEM?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>SELF CLARITY SYSTEM creates structured, high-density digital frameworks designed to help ambitious individuals eliminate mental clutter, map authentic core values, and build actionable life blueprints. Our core product is <em>Know Yourself: From Lost to Life Blueprint</em>.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What is included in the $27 Know Yourself package?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>You receive the complete 11-Chapter Theoretical Book (Parts I-V), the 5-Chapter Practical Workbook featuring the 8-Domain Life Audit and 90-Day Action Plan, plus the bonus 10-Tool Life Reset Toolkit. All formatted as universal, interactive PDFs with lifetime access.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h2>2. Digital Formats & Device Compatibility</h2>
+          <div class="faq-accordion" style="margin-top: 1rem;">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Can I use the workbook on my iPad or tablet?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! The PDF is fully compatible with popular tablet note-taking applications including GoodNotes, Notability, Apple Books, Noteshelf, and Adobe Acrobat Reader. You can write directly with an Apple Pencil or stylus.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Can I print the workbook on standard paper?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. The workbook is formatted in high-resolution, print-ready layout (compatible with both US Letter and A4 paper sizes).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h2>3. Ordering, Delivery & Refunds</h2>
+          <div class="faq-accordion" style="margin-top: 1rem;">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How fast is delivery?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Delivery is 100% instantaneous. Right after your secure payment is processed through Payhip, you are redirected to the download portal, and an automated backup email with your lifetime access link is delivered to your inbox.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What is your 30-day money-back guarantee?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>We stand behind our materials completely. If you engage with the exercises and honestly feel the system did not provide clarity and value, simply email support@selfclaritysystem.online within 30 days of purchase for a full refund.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 5: PRIVACY POLICY (ROUTE: /privacy-policy)           -->
+  <!-- ========================================================= -->
+  <main id="view-privacy" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">Legal Documents</span>
+        <h1>Privacy Policy</h1>
+        <p>Last updated: August 18, 2026 • Official policy of SELF CLARITY SYSTEM</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container container-narrow">
+        <div class="content-box">
+          <h2>1. Introduction & Scope</h2>
+          <p>Welcome to <strong>SELF CLARITY SYSTEM</strong> ("we," "our," or "us"), operating at <strong>https://selfclaritysystem.online</strong>. We are committed to protecting your privacy and ensuring your personal information is handled in a safe, transparent, and responsible manner.</p>
+          <p>This Privacy Policy outlines the types of information we collect when you visit our website, purchase digital products, or communicate with customer support, and how that information is used and protected.</p>
+
+          <h2>2. Information We Collect</h2>
+          <p>We collect minimal personal information necessary to deliver our digital products and provide customer assistance:</p>
+          <ul>
+            <li><strong>Order & Contact Information:</strong> When you purchase <em>Know Yourself</em> or contact support, we collect your name, email address, transaction identifiers, and correspondence history.</li>
+            <li><strong>Payment Information:</strong> All financial transactions are processed securely through certified third-party payment gateways (Payhip, PayPal, and Stripe). We never store or have access to your full credit card numbers or banking credentials.</li>
+            <li><strong>Technical & Analytical Data:</strong> We may collect non-identifiable technical data such as browser type, device information, operating system, and anonymized interaction metrics (via Meta Pixel) to improve website performance and user experience.</li>
+          </ul>
+
+          <h2>3. How We Use Your Information</h2>
+          <p>We use your information strictly for legitimate operational purposes:</p>
+          <ul>
+            <li>To generate and deliver your digital product download links and invoice receipts.</li>
+            <li>To respond to customer support inquiries and process refund requests.</li>
+            <li>To protect against fraudulent transactions and ensure website security.</li>
+            <li>We do NOT sell, rent, or trade your personal information to third parties for advertising or marketing.</li>
+          </ul>
+
+          <h2>4. Data Retention & Security</h2>
+          <p>We implement industry-standard 256-bit SSL encryption across our website and partner only with PCI-DSS compliant checkout processors. We retain order records only for as long as necessary to fulfill licensing rights and tax/legal obligations.</p>
+
+          <h2>5. Your Privacy Rights</h2>
+          <p>Depending on your jurisdiction (including GDPR in the EU and CCPA in California), you have the right to request access to, correction of, or deletion of your personal data held by us. To exercise these rights, please contact <strong>support@selfclaritysystem.online</strong>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 6: TERMS OF SERVICE (ROUTE: /terms-of-service)       -->
+  <!-- ========================================================= -->
+  <main id="view-terms" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">Legal Documents</span>
+        <h1>Terms of Service</h1>
+        <p>Last updated: August 18, 2026 • Official terms of SELF CLARITY SYSTEM</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container container-narrow">
+        <div class="content-box">
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing <strong>https://selfclaritysystem.online</strong> or purchasing digital products from <strong>SELF CLARITY SYSTEM</strong>, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the website or purchase our products.</p>
+
+          <h2>2. Digital Product License</h2>
+          <p>Upon completing payment of the $27 purchase price for <em>Know Yourself: From Lost to Life Blueprint</em>, you are granted a non-exclusive, non-transferable, revocable single-user license to download, read, and print the digital PDF materials for your own personal, non-commercial self-development use.</p>
+          <p><strong>Prohibited Uses:</strong> You may not resell, distribute, sublicense, republish, upload to file-sharing networks, or create derivative commercial works from any part of our digital publications without prior written permission from SELF CLARITY SYSTEM.</p>
+
+          <h2>3. Intellectual Property Rights</h2>
+          <p>All content, text, frameworks, worksheets, graphics, logos, and digital publications on this site are the exclusive intellectual property of SELF CLARITY SYSTEM and protected by international copyright laws.</p>
+
+          <h2>4. Disclaimers & Limitations of Liability</h2>
+          <p>Our products and frameworks are designed for educational, personal development, and self-reflection purposes only. They do not constitute professional medical, psychological, financial, or legal advice. Individual outcomes depend entirely upon personal implementation and commitment.</p>
+          <p>In no event shall SELF CLARITY SYSTEM be liable for any indirect, incidental, or consequential damages arising out of your use or inability to use our digital materials.</p>
+
+          <h2>5. Governing Law & Contact</h2>
+          <p>These terms shall be governed in accordance with international commercial standards. For questions regarding our Terms of Service, contact us at <strong>support@selfclaritysystem.online</strong>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 7: REFUND POLICY (ROUTE: /refund-policy)             -->
+  <!-- ========================================================= -->
+  <main id="view-refund" class="site-view">
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-tag">Satisfaction Guarantee</span>
+        <h1>Refund & Satisfaction Policy</h1>
+        <p>Our 30-Day 100% Peace-of-Mind Guarantee for SELF CLARITY SYSTEM customers.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container container-narrow">
+        <div class="content-box">
+          <h2>Our Commitment to You</h2>
+          <p>We built <strong>SELF CLARITY SYSTEM</strong> to deliver actionable, high-density clarity and eliminate the fluff of traditional self-help books. We want every customer to feel completely confident when purchasing <em>Know Yourself: From Lost to Life Blueprint</em> ($27).</p>
+
+          <h2>The 30-Day Money-Back Guarantee</h2>
+          <p>If you purchase <em>Know Yourself</em>, read the 11 theoretical chapters, test the 5 practical workbook exercises, and honestly feel that the system did not provide clarity or practical value for your life, you are entitled to a full 100% refund within <strong>30 calendar days</strong> of your purchase date.</p>
+
+          <h2>How to Request a Refund</h2>
+          <p>Requesting a refund is straightforward and hassle-free:</p>
+          <ol style="margin-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-muted); line-height: 1.8;">
+            <li>Send an email to <strong>support@selfclaritysystem.online</strong> from the email address used during purchase.</li>
+            <li>Include your <strong>Payhip Order ID</strong> or payment receipt date.</li>
+            <li>Share brief, honest feedback on why the system was not a fit for you so we can continue improving our tools.</li>
+          </ol>
+          <p>Once received, our support team will process your refund through Payhip/PayPal within 1 to 2 business days. The funds will return directly to your original payment method.</p>
+
+          <h2>Questions or Support?</h2>
+          <p>If you are experiencing technical difficulties opening your download or need assistance with tablet formats, our team is always ready to assist at <strong>support@selfclaritysystem.online</strong>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- GLOBAL SITE FOOTER                                        -->
+  <!-- ========================================================= -->
   <footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-title">Know Yourself: From Lost to Life Blueprint</div>
-        <p>By Azddine • Digital Product · Secure Payment via PayPal & Card</p>
-        <p class="footer-note">© 2026 Azddine. All rights reserved. For personal development purposes only.</p>
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="brand-logo-wrap">
+            <div class="brand-logo-icon">S</div>
+            <span class="footer-brand-title">SELF CLARITY SYSTEM</span>
+          </div>
+          <p class="footer-tagline">Practical digital tools for clearer thinking, aligned action, and meaningful progress.</p>
+          <p style="font-size: 0.85rem; color: #94a3b8;">
+            Primary Domain: <a href="https://selfclaritysystem.online" target="_blank" rel="noopener" style="color: var(--gold);">https://selfclaritysystem.online</a>
+          </p>
+        </div>
+
+        <!-- Shop Column -->
+        <div>
+          <h3 class="footer-col-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="/know-yourself" data-route="/know-yourself" class="footer-link">Know Yourself ($27)</a></li>
+            <li><a href="/know-yourself#whats-inside" data-route="/know-yourself#whats-inside" class="footer-link">Workbook Contents</a></li>
+            <li><a href="/know-yourself#bonus" data-route="/know-yourself#bonus" class="footer-link">Life Reset Toolkit</a></li>
+            <li><a href="/know-yourself#pricing" data-route="/know-yourself#pricing" class="footer-link">Pricing & Instant Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Column -->
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="/contact" data-route="/contact" class="footer-link">Contact Support</a></li>
+            <li><a href="/faq" data-route="/faq" class="footer-link">Frequently Asked Questions</a></li>
+            <li><a href="mailto:support@selfclaritysystem.online" class="footer-link">support@selfclaritysystem.online</a></li>
+            <li><a href="/about" data-route="/about" class="footer-link">About the Author</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div>
+          <h3 class="footer-col-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="/privacy-policy" data-route="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms-of-service" data-route="/terms-of-service" class="footer-link">Terms of Service</a></li>
+            <li><a href="/refund-policy" data-route="/refund-policy" class="footer-link">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Disclaimer & Copyright -->
+      <div class="footer-bottom">
+        <p>© 2026 Self Clarity System. All rights reserved.</p>
+        <p>For personal development purposes only • Secure digital delivery powered by Payhip & PayPal</p>
       </div>
     </div>
   </footer>
 
-  <!-- STICKY MOBILE BAR -->
+  <!-- STICKY MOBILE PURCHASE BAR -->
   <aside id="sticky-bar" aria-label="Quick purchase bar">
     <div class="sticky-bar-inner">
       <div class="sticky-info">
@@ -2006,29 +2686,126 @@
     <div class="lightbox-container">
       <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close preview modal">✕</button>
       <div class="lightbox-img-wrap">
-        <img src="" alt="" id="lightbox-img" class="lightbox-img" width="800" height="600" decoding="async" referrerpolicy="no-referrer">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img" width="800" height="600" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;">
       </div>
       <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT LOGIC (ACCORDION, STICKY SCROLL, LIGHTBOX & ERROR HANDLING) -->
+  <!-- CLIENT-SIDE ROUTER & INTERACTIVE JAVASCRIPT -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // 1. Graceful Image Error Handling
-      const allImages = document.querySelectorAll('img');
-      allImages.forEach(function(img) {
-        img.addEventListener('error', function() {
-          const container = img.closest('.hero-cover-wrap, .transformation-card, .inside-visual-banner, .preview-main-wrap, .pricing-product-img-wrap');
-          if (container) {
-            container.classList.add('img-load-error');
+      // -------------------------------------------------------------
+      // 1. ROUTING CONTROLLER
+      // -------------------------------------------------------------
+      const routes = {
+        '/': 'view-product',
+        '/know-yourself': 'view-product',
+        '/about': 'view-about',
+        '/contact': 'view-contact',
+        '/faq': 'view-faq',
+        '/privacy-policy': 'view-privacy',
+        '/terms-of-service': 'view-terms',
+        '/refund-policy': 'view-refund'
+      };
+
+      function navigateTo(path, updateHistory = true, hash = '') {
+        const cleanPath = path.split('#')[0].replace(/\/$/, '') || '/';
+        const targetViewId = routes[cleanPath] || 'view-product';
+
+        // Hide all views
+        document.querySelectorAll('.site-view').forEach(function(view) {
+          view.classList.remove('active-view');
+        });
+
+        // Show active view
+        const activeView = document.getElementById(targetViewId);
+        if (activeView) {
+          activeView.classList.add('active-view');
+        }
+
+        // Update nav links active states
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(function(link) {
+          const route = link.getAttribute('data-route') || link.getAttribute('href');
+          if (route && (route === cleanPath || (cleanPath === '/' && route === '/'))) {
+            link.classList.add('active');
           } else {
-            img.classList.add('img-load-error');
+            link.classList.remove('active');
           }
         });
+
+        // Push state if needed
+        if (updateHistory) {
+          const newUrl = cleanPath === '/' ? '/' : cleanPath + (hash ? '#' + hash : '');
+          try {
+            history.pushState({ path: cleanPath }, '', newUrl);
+          } catch (e) {
+            // Fallback for sandboxed iframes
+            window.location.hash = cleanPath;
+          }
+        }
+
+        // Handle anchor hash scrolling
+        if (hash) {
+          setTimeout(function() {
+            const el = document.getElementById(hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 50);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Close mobile drawer if open
+        const drawer = document.getElementById('mobile-drawer');
+        if (drawer) drawer.classList.remove('active');
+      }
+
+      // Intercept routing clicks
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[data-route], a[href^="/"]');
+        if (link) {
+          const href = link.getAttribute('data-route') || link.getAttribute('href');
+          if (href && !href.startsWith('http') && !href.startsWith('mailto:')) {
+            e.preventDefault();
+            const parts = href.split('#');
+            const path = parts[0] || '/';
+            const hash = parts[1] || '';
+            navigateTo(path, true, hash);
+          }
+        }
       });
 
-      // 2. FAQ Accordion functionality
+      // Listen for browser Back/Forward navigation
+      window.addEventListener('popstate', function() {
+        const path = window.location.pathname || '/';
+        const hash = window.location.hash ? window.location.hash.replace('#', '') : '';
+        navigateTo(path, false, hash);
+      });
+
+      // Initial route load
+      const initialPath = window.location.pathname || '/';
+      const initialHash = window.location.hash ? window.location.hash.replace('#', '') : '';
+      if (initialHash && initialHash.startsWith('/')) {
+        navigateTo(initialHash, false, '');
+      } else {
+        navigateTo(initialPath, false, initialHash);
+      }
+
+      // -------------------------------------------------------------
+      // 2. MOBILE MENU TOGGLE
+      // -------------------------------------------------------------
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      if (mobileMenuToggle && mobileDrawer) {
+        mobileMenuToggle.addEventListener('click', function() {
+          const isExpanded = mobileDrawer.classList.toggle('active');
+          mobileMenuToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 3. FAQ ACCORDION FUNCTIONALITY
+      // -------------------------------------------------------------
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(function(item) {
         const questionBtn = item.querySelector('.faq-question');
@@ -2036,14 +2813,17 @@
           questionBtn.addEventListener('click', function() {
             const isActive = item.classList.contains('active');
             
-            // Close all others
-            faqItems.forEach(function(other) {
-              other.classList.remove('active');
-              const btn = other.querySelector('.faq-question');
-              if (btn) btn.setAttribute('aria-expanded', 'false');
-            });
+            // Close other items in the same container
+            const parentContainer = item.parentElement;
+            if (parentContainer) {
+              parentContainer.querySelectorAll('.faq-item').forEach(function(other) {
+                other.classList.remove('active');
+                const btn = other.querySelector('.faq-question');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+              });
+            }
 
-            // Toggle current
+            // Toggle current item
             if (!isActive) {
               item.classList.add('active');
               questionBtn.setAttribute('aria-expanded', 'true');
@@ -2052,7 +2832,9 @@
         }
       });
 
-      // 3. Sticky Bottom Bar Scroll Listener
+      // -------------------------------------------------------------
+      // 4. STICKY BOTTOM PURCHASE BAR SCROLL LISTENER
+      // -------------------------------------------------------------
       const stickyBar = document.getElementById('sticky-bar');
       const heroSection = document.getElementById('hero');
       const pricingSection = document.getElementById('pricing');
@@ -2060,14 +2842,18 @@
       function handleStickyBarScroll() {
         if (!stickyBar || !heroSection || !pricingSection) return;
 
+        // Only show sticky bar on product view
+        const productView = document.getElementById('view-product');
+        if (!productView || !productView.classList.contains('active-view')) {
+          stickyBar.classList.remove('visible');
+          return;
+        }
+
         const heroRect = heroSection.getBoundingClientRect();
         const pricingRect = pricingSection.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // User has scrolled past hero bottom
         const pastHero = heroRect.bottom < 0;
-        
-        // User is currently viewing the pricing section
         const atPricing = (pricingRect.top < windowHeight - 100) && (pricingRect.bottom > 100);
 
         if (pastHero && !atPricing) {
@@ -2078,9 +2864,10 @@
       }
 
       window.addEventListener('scroll', handleStickyBarScroll, { passive: true });
-      handleStickyBarScroll(); // Initial check
 
-      // 4. Lightbox Modal Functionality
+      // -------------------------------------------------------------
+      // 5. LIGHTBOX MODAL FUNCTIONALITY
+      // -------------------------------------------------------------
       const lightboxModal = document.getElementById('image-lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxCaption = document.getElementById('lightbox-caption');
@@ -2092,6 +2879,7 @@
         if (!lightboxModal || !lightboxImg || !lightboxCaption) return;
         lastFocusedElement = triggerBtn || document.activeElement;
         
+        lightboxImg.style.display = 'block';
         lightboxImg.src = imgSrc;
         lightboxImg.alt = altText || captionText || 'Workbook page preview';
         lightboxCaption.textContent = captionText || '';
