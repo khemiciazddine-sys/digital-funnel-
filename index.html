@@ -32,9 +32,12 @@
   <!-- Preconnect and Resource Hints -->
   <link rel="preconnect" href="https://connect.facebook.net">
   <link rel="preconnect" href="https://payhip.com">
-  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
-  <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
-  <link rel="preload" as="image" href="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/hero.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/transformation.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/workbook-contents.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/product-preview.webp" type="image/webp">
+  <link rel="preload" as="image" href="/images/gallery.webp" type="image/webp">
+  <link rel="preload" as="image" href="/images/pricing-product.webp" type="image/webp" fetchpriority="high">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -470,13 +473,21 @@
       margin-top: 1rem;
     }
 
-    /* UNIVERSAL IMAGE & FALLBACK RULES */
+    /* UNIVERSAL IMAGE & PICTURE RULES */
+    picture {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
     img {
       max-width: 100%;
       width: 100%;
       height: auto;
       object-fit: contain;
       display: block;
+      content-visibility: visible;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: auto;
     }
     .hero-cover-img,
     .transformation-img,
@@ -1651,7 +1662,7 @@
         <!-- Desktop Navigation -->
         <nav class="site-nav" id="desktop-nav" aria-label="Main Navigation">
           <a href="/" data-route="/" class="nav-link active" id="nav-home">Home</a>
-          <a href="/know-yourself" data-route="/know-yourself" class="nav-link" id="nav-shop">Shop</a>
+          <a href="https://payhip.com/AZmediadigital" class="nav-link" id="nav-shop" target="_blank" rel="noopener noreferrer">Shop</a>
           <a href="/about" data-route="/about" class="nav-link" id="nav-about">About</a>
           <a href="/contact" data-route="/contact" class="nav-link" id="nav-contact">Contact</a>
           <a href="/faq" data-route="/faq" class="nav-link" id="nav-faq">FAQ</a>
@@ -1675,7 +1686,7 @@
     <div id="mobile-drawer" aria-label="Mobile Navigation">
       <ul class="mobile-nav-list">
         <li><a href="/" data-route="/" class="mobile-nav-link active">Home</a></li>
-        <li><a href="/know-yourself" data-route="/know-yourself" class="mobile-nav-link">Shop (Know Yourself)</a></li>
+        <li><a href="https://payhip.com/AZmediadigital" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Shop</a></li>
         <li><a href="/about" data-route="/about" class="mobile-nav-link">About Us</a></li>
         <li><a href="/contact" data-route="/contact" class="mobile-nav-link">Contact & Support</a></li>
         <li><a href="/faq" data-route="/faq" class="mobile-nav-link">FAQ</a></li>
@@ -1719,7 +1730,11 @@
           <div class="hero-media-wrapper">
             <div class="hero-cover-wrap" id="hero-cover-card">
               <!-- IMAGE 1: Hero Main Workbook Image -->
-              <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/1782586557206_044354.png" alt="Know Yourself complete self-development workbook" class="hero-cover-img" width="460" height="580" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+              <picture>
+                <source srcset="/images/hero.webp" type="image/webp">
+                <source srcset="/images/hero.png" type="image/png">
+                <img src="/images/hero.jpg" alt="Know Yourself complete self-development workbook" class="hero-cover-img" width="460" height="580" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+              </picture>
             </div>
 
             <div class="hero-product-preview" id="hero-book-preview">
@@ -1790,7 +1805,11 @@
         
         <div class="transformation-card" id="transformation-showcase">
           <!-- IMAGE 2: Transformation Before / After Image -->
-          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_03_35%20PM.png" alt="Know Yourself life transformation workbook" class="transformation-img" width="800" height="1140" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+          <picture>
+            <source srcset="/images/transformation.webp" type="image/webp">
+            <source srcset="/images/transformation.png" type="image/png">
+            <img src="/images/transformation.jpg" alt="Know Yourself life transformation workbook" class="transformation-img" width="800" height="1140" loading="eager" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+          </picture>
         </div>
       </div>
     </section>
@@ -1874,7 +1893,11 @@
         <!-- Inside System Visual Overview (IMAGE 3) -->
         <div class="inside-visual-banner" id="inside-visual-showcase">
           <!-- IMAGE 3: Book and Workbook Content Image -->
-          <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/ChatGPT%20Image%20Aug%2014%2C%202026%2C%2008_09_25%20PM.png" alt="Know Yourself workbook exercises and life blueprint" loading="lazy" decoding="async" class="inside-bundle-img" width="1040" height="1500" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+          <picture>
+            <source srcset="/images/workbook-contents.webp" type="image/webp">
+            <source srcset="/images/workbook-contents.png" type="image/png">
+            <img src="/images/workbook-contents.jpg" alt="Know Yourself workbook exercises and life blueprint" loading="eager" decoding="async" class="inside-bundle-img" width="1040" height="1500" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+          </picture>
         </div>
       </div>
     </section>
@@ -1994,9 +2017,13 @@
         <div class="preview-gallery-grid" id="product-preview-gallery">
           <!-- IMAGE 4: Complete Edition Main Preview -->
           <div class="preview-gallery-item" id="gallery-item-complete">
-            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" data-caption="Know Yourself Complete Edition product preview" aria-label="Open full preview of Complete Edition pages">
+            <button type="button" class="mockup-img-btn" data-full-img="/images/product-preview.webp" data-caption="Know Yourself Complete Edition product preview" aria-label="Open full preview of Complete Edition pages">
               <div class="preview-main-wrap">
-                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000036c72439c90dc7fcb21a184_043855.png" alt="Know Yourself Complete Edition product preview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+                <picture>
+                  <source srcset="/images/product-preview.webp" type="image/webp">
+                  <source srcset="/images/product-preview.png" type="image/png">
+                  <img src="/images/product-preview.jpg" alt="Know Yourself Complete Edition product preview" class="preview-main-img" width="860" height="1240" loading="eager" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
                 </div>
@@ -2010,9 +2037,13 @@
 
           <!-- IMAGE 5: Secondary Gallery Preview -->
           <div class="preview-gallery-item" id="gallery-item-premium">
-            <button type="button" class="mockup-img-btn" data-full-img="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" data-caption="Know Yourself digital workbook preview" aria-label="Open full preview of Premium Workbook edition">
+            <button type="button" class="mockup-img-btn" data-full-img="/images/gallery.webp" data-caption="Know Yourself digital workbook preview" aria-label="Open full preview of Premium Workbook edition">
               <div class="preview-main-wrap">
-                <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_0000000043ec7243a0d20f2f5b507e96_043641.png" alt="Know Yourself digital workbook preview" class="preview-main-img" width="860" height="1240" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+                <picture>
+                  <source srcset="/images/gallery.webp" type="image/webp">
+                  <source srcset="/images/gallery.png" type="image/png">
+                  <img src="/images/gallery.jpg" alt="Know Yourself digital workbook preview" class="preview-main-img" width="860" height="1240" loading="eager" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+                </picture>
                 <div class="mockup-zoom-overlay">
                   <span class="mockup-zoom-badge">🔍 Click to View Larger</span>
                 </div>
@@ -2102,7 +2133,11 @@
           
           <!-- IMAGE 6: Pricing Card / Product Presentation Image -->
           <div class="pricing-product-img-wrap" id="pricing-presentation-block">
-            <img src="https://raw.githubusercontent.com/khemiciazddine-sys/digital-funnel-/main/file_00000000ea5c7243bb227fa706842070_043731%20%281%29.png" alt="Know Yourself Complete Edition digital product" class="pricing-presentation-img" width="580" height="850" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+            <picture>
+              <source srcset="/images/pricing-product.webp" type="image/webp">
+              <source srcset="/images/pricing-product.png" type="image/png">
+              <img src="/images/pricing-product.jpg" alt="Know Yourself Complete Edition digital product" class="pricing-presentation-img" width="580" height="850" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" style="width: 100%; max-width: 100%; height: auto; object-fit: contain; display: block;" />
+            </picture>
           </div>
 
           <div class="price-display">
