@@ -1,843 +1,1115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Know Yourself is a guided self-discovery workbook designed to help you gain clarity, understand what matters, make better decisions, and build a practical 90-day plan.">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Know Yourself — a guided self-discovery workbook to help you gain clarity, understand what matters, make better decisions, and build a practical 90-day life plan.">
+<meta name="theme-color" content="#0c1d3a">
 <title>Know Yourself — From Lost to Life Blueprint</title>
 
 <style>
 :root{
-  --navy:#091a33;
-  --navy2:#102b52;
+  --ink:#0c1d3a;
+  --ink2:#122850;
   --gold:#d5a74c;
-  --gold2:#f1ca75;
-  --cream:#f5f0e7;
-  --paper:#fbfaf7;
+  --gold2:#f2cc77;
+  --paper:#fbf8f2;
+  --cream:#f2ede3;
+  --text:#1e293b;
+  --muted:#64748b;
   --white:#fff;
-  --text:#263246;
-  --muted:#687386;
-  --green:#2e7652;
-  --line:#e7e1d6;
-  --shadow:0 20px 60px rgba(9,26,51,.12);
+  --green:#2d7a54;
+  --line:#e8e2d7;
+  --shadow:0 20px 60px rgba(12,29,58,.12);
+  --shadow2:0 12px 35px rgba(12,29,58,.09);
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 html{
   scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  background:var(--paper);
+  font-family:Inter,Arial,Helvetica,sans-serif;
   color:var(--text);
-  font-family:Inter,Arial,sans-serif;
-  line-height:1.6;
+  background:var(--paper);
+  line-height:1.65;
+  overflow-x:hidden;
 }
 
-.wrap{
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
   width:min(1120px,calc(100% - 40px));
   margin:auto;
 }
 
-h1,h2,h3,p{
-  margin-top:0;
-}
-
-h1,h2{
+.serif{
   font-family:Georgia,"Times New Roman",serif;
 }
 
-a{
-  text-decoration:none;
-}
-
-.eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:.74rem;
-  font-weight:800;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:var(--navy);
-  padding:16px 25px;
-  border-radius:9px;
-  font-weight:900;
-  box-shadow:0 12px 28px rgba(213,167,76,.25);
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 16px 34px rgba(213,167,76,.35);
-}
-
 /* NAV */
-
 .nav{
   position:sticky;
   top:0;
-  z-index:50;
-  background:rgba(9,26,51,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,.1);
+  z-index:100;
+  background:rgba(251,248,242,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(232,226,215,.85);
 }
 
-.navin{
-  height:70px;
+.nav-inner{
+  min-height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
 }
 
-.brand{
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.08em;
-  font-size:.88rem;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:var(--ink);
+  font-weight:800;
+  letter-spacing:.02em;
 }
 
-.brand small{
-  display:block;
+.logo-mark{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--ink);
   color:var(--gold2);
-  font-size:.66rem;
-  letter-spacing:.03em;
+  display:grid;
+  place-items:center;
+  font-family:Georgia,serif;
+  font-size:18px;
+}
+
+.logo small{
+  display:block;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.nav-cta{
+  background:var(--ink);
+  color:#fff;
+  padding:11px 19px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
+  background:var(--ink2);
 }
 
 /* HERO */
-
 .hero{
-  color:#fff;
+  padding:76px 0 90px;
   background:
-  radial-gradient(circle at 85% 5%,rgba(213,167,76,.2),transparent 30%),
-  linear-gradient(135deg,#071426,#102852 58%,#17233c);
-  padding:80px 0 70px;
-  overflow:hidden;
+    radial-gradient(circle at 90% 10%,rgba(213,167,76,.16),transparent 28%),
+    linear-gradient(180deg,#fffdf9 0%,var(--paper) 100%);
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:55px;
+  grid-template-columns:1.03fr .97fr;
   align-items:center;
+  gap:70px;
 }
 
-.hero h1{
-  font-size:clamp(2.6rem,5vw,4.7rem);
-  line-height:1.04;
-  letter-spacing:-.045em;
-  margin:14px 0 22px;
-}
-
-.hero h1 span{
-  color:var(--gold2);
-}
-
-.lead{
-  color:#d5deeb;
-  font-size:1.12rem;
-  max-width:620px;
-}
-
-.checklist{
-  list-style:none;
-  padding:0;
-  margin:28px 0;
-}
-
-.checklist li{
-  padding:7px 0 7px 31px;
-  position:relative;
-  color:#f5f7fa;
-}
-
-.checklist li:before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  top:7px;
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:rgba(213,167,76,.18);
-  color:var(--gold2);
-  font-weight:900;
-}
-
-.micro{
-  color:#b7c2d3;
-  font-size:.82rem;
-  margin-top:14px;
-}
-
-/* PRODUCT MOCKUP */
-
-.product-scene{
-  position:relative;
-  display:flex;
-  justify-content:center;
+.eyebrow{
+  display:inline-flex;
   align-items:center;
-  min-height:520px;
-}
-
-.book{
-  width:310px;
-  min-height:430px;
-  padding:38px 30px;
-  border-radius:5px 16px 16px 5px;
-  background:
-    linear-gradient(135deg,#102850,#0a1c38);
-  color:#fff;
-  box-shadow:
-    20px 25px 55px rgba(0,0,0,.4),
-    inset -8px 0 15px rgba(0,0,0,.12);
-  transform:rotate(-4deg);
-  position:relative;
-}
-
-.book:before{
-  content:"";
-  position:absolute;
-  left:17px;
-  top:0;
-  bottom:0;
-  width:1px;
-  background:rgba(255,255,255,.15);
-}
-
-.book-top{
-  color:var(--gold2);
+  gap:8px;
+  color:#8b6a25;
+  background:#f7edcf;
+  border:1px solid #ead8a9;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
   text-transform:uppercase;
-  letter-spacing:.18em;
-  font-size:.68rem;
-  font-weight:800;
-}
-
-.book h2{
-  font-size:2.45rem;
-  line-height:1;
-  margin:45px 0 18px;
-}
-
-.book h2 span{
-  color:var(--gold2);
-}
-
-.book p{
-  color:#ccd6e5;
-  font-size:.88rem;
-}
-
-.book-line{
-  height:1px;
-  background:rgba(255,255,255,.2);
-  margin:35px 0 20px;
-}
-
-.book-footer{
-  color:var(--gold2);
-  font-size:.7rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.floating-card{
-  position:absolute;
-  right:0;
-  bottom:30px;
-  background:#fff;
-  color:var(--navy);
-  border-radius:12px;
-  padding:16px 20px;
-  box-shadow:var(--shadow);
-  font-weight:800;
-}
-
-.floating-card span{
-  display:block;
-  color:var(--green);
-  font-size:.75rem;
-  margin-top:3px;
-}
-
-/* TRUST */
-
-.trust{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-}
-
-.trustin{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-  padding:20px 0;
-  text-align:center;
-  font-size:.82rem;
-  font-weight:800;
-  color:#465267;
-}
-
-.trustin b{
-  color:var(--gold);
-  font-size:1.1rem;
-}
-
-/* SECTIONS */
-
-section{
-  padding:82px 0;
-}
-
-.center{
-  max-width:780px;
-  text-align:center;
-  margin:0 auto 42px;
-}
-
-.section-title{
-  color:var(--navy);
-  font-size:clamp(2rem,3.6vw,3.15rem);
-  line-height:1.12;
-  letter-spacing:-.035em;
-  margin:10px 0 15px;
-}
-
-.section-title .gold{
-  color:#b77a1f;
-}
-
-.subtitle{
-  color:var(--muted);
-  font-size:1.03rem;
-}
-
-/* PROBLEM */
-
-.problem{
-  background:var(--navy);
-  color:#fff;
-}
-
-.problem .section-title{
-  color:#fff;
-}
-
-.problem .subtitle{
-  color:#c7d0df;
-}
-
-.problem-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.pain{
-  border:1px solid rgba(255,255,255,.13);
-  border-radius:13px;
-  padding:27px;
-  background:rgba(255,255,255,.045);
-}
-
-.pain strong{
-  display:block;
-  color:var(--gold2);
-  margin-bottom:8px;
-}
-
-.pain p{
-  color:#d0d8e4;
-  font-size:.92rem;
-  margin:0;
-}
-
-/* FRAMEWORK */
-
-.framework{
-  background:var(--cream);
-}
-
-.framework-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:14px;
-}
-
-.framework-card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:13px;
-  padding:25px 18px;
-  text-align:center;
-}
-
-.framework-card b{
-  color:var(--navy);
-  display:block;
-  font-size:.92rem;
-  letter-spacing:.04em;
-}
-
-.framework-card span{
-  display:block;
-  color:var(--gold);
-  font-size:.72rem;
-  margin-top:7px;
-}
-
-/* BENEFITS */
-
-.benefits{
-  background:#fff;
-}
-
-.benefit-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.benefit{
-  padding:27px 23px;
-  border:1px solid var(--line);
-  border-radius:13px;
-  background:linear-gradient(180deg,#fff,#fcfaf6);
-}
-
-.icon{
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  border-radius:12px;
-  background:#f8ecd4;
-  color:#a66b12;
-  font-size:1.3rem;
-  margin-bottom:16px;
-}
-
-.benefit h3{
-  color:var(--navy);
-  font-size:1.08rem;
-}
-
-.benefit p{
-  color:var(--muted);
-  font-size:.91rem;
-  margin:0;
-}
-
-/* INCLUDED */
-
-.included{
-  background:linear-gradient(180deg,#fff,var(--cream));
-}
-
-.included-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:55px;
-  align-items:center;
-}
-
-.preview{
-  background:#fff;
-  border-radius:18px;
-  padding:25px;
-  box-shadow:var(--shadow);
-  border:1px solid var(--line);
-}
-
-.preview-page{
-  min-height:430px;
-  padding:27px;
-  border:1px solid #ded8ca;
-  background:#fffdf9;
-}
-
-.preview-page h3{
-  color:var(--navy);
-  font-family:Georgia,serif;
-  font-size:1.5rem;
+  letter-spacing:.12em;
   margin-bottom:22px;
 }
 
-.audit-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:15px 0;
-}
-
-.audit-label{
-  width:105px;
-  font-size:.76rem;
-  color:#586579;
-}
-
-.audit-bar{
-  height:9px;
-  background:#e9e4da;
-  border-radius:20px;
-  flex:1;
-  overflow:hidden;
-}
-
-.audit-bar span{
-  display:block;
-  height:100%;
-  width:70%;
+.eyebrow:before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
   background:var(--gold);
 }
 
-.content-list{
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--ink);
+  font-size:clamp(44px,5.5vw,72px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  margin-bottom:24px;
+}
+
+.hero-lead{
+  font-size:18px;
+  line-height:1.75;
+  color:#526174;
+  max-width:640px;
+  margin-bottom:24px;
+}
+
+.check-list{
   list-style:none;
-  padding:0;
-  margin:25px 0;
+  display:grid;
+  gap:11px;
+  margin:25px 0 29px;
 }
 
-.content-list li{
+.check-list li{
   display:flex;
-  gap:14px;
-  padding:15px 0;
-  border-bottom:1px solid var(--line);
+  align-items:flex-start;
+  gap:11px;
+  font-size:15px;
+  color:#334155;
 }
 
-.num{
-  width:30px;
-  height:30px;
-  flex:none;
+.check{
+  flex:0 0 21px;
+  width:21px;
+  height:21px;
+  border-radius:50%;
+  background:#e5f1ea;
+  color:var(--green);
   display:grid;
   place-items:center;
-  border-radius:50%;
-  background:var(--navy);
-  color:var(--gold2);
-  font-size:.78rem;
+  font-size:12px;
   font-weight:900;
+  margin-top:2px;
 }
 
-.content-list b{
-  color:var(--navy);
-  display:block;
+.hero-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-.content-list span{
-  color:var(--muted);
-  font-size:.88rem;
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:var(--ink);
+  color:#fff;
+  padding:16px 24px;
+  border-radius:10px;
+  font-weight:800;
+  font-size:15px;
+  box-shadow:0 12px 30px rgba(12,29,58,.2);
+  transition:.2s ease;
 }
 
-/* COMPARISON */
-
-.compare{
-  background:#fff;
+.primary-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 35px rgba(12,29,58,.26);
 }
 
-.table-wrap{
-  overflow-x:auto;
-  border-radius:14px;
-  box-shadow:var(--shadow);
-  border:1px solid var(--line);
+.micro{
+  margin-top:13px;
+  color:#7a8797;
+  font-size:12px;
 }
 
-table{
-  width:100%;
-  min-width:650px;
-  border-collapse:collapse;
-  background:#fff;
+/* PRODUCT MOCKUP */
+.hero-visual{
+  position:relative;
+  min-height:590px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-th,td{
-  padding:18px 22px;
-  text-align:left;
-  border-bottom:1px solid var(--line);
-  font-size:.92rem;
+.glow{
+  position:absolute;
+  width:430px;
+  height:430px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(213,167,76,.25),rgba(213,167,76,0) 68%);
 }
 
-th{
-  background:var(--navy);
+.book{
+  position:relative;
+  width:min(390px,90%);
+  transform:rotate(-3deg);
+  filter:drop-shadow(0 28px 28px rgba(12,29,58,.22));
+  z-index:2;
+}
+
+.book-cover{
+  position:relative;
+  aspect-ratio:.72;
+  border-radius:6px 14px 14px 6px;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#0b1d3a,#17345e);
+  border-left:7px solid #08162c;
+  padding:42px 34px;
   color:#fff;
 }
 
-th:last-child{
-  color:var(--gold2);
+.book-cover:before{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border:1px solid rgba(242,204,119,.6);
+  pointer-events:none;
 }
 
-td:last-child{
-  color:var(--green);
+.book-cover:after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:1px solid rgba(242,204,119,.3);
+  right:-75px;
+  bottom:70px;
+  box-shadow:
+    0 0 0 25px rgba(242,204,119,.04),
+    0 0 0 50px rgba(242,204,119,.025);
+}
+
+.book-top{
+  position:relative;
+  z-index:2;
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:10px;
   font-weight:800;
 }
 
-/* HOW */
-
-.how{
-  background:var(--navy);
-  color:#fff;
+.book-title{
+  position:relative;
+  z-index:2;
+  margin-top:95px;
+  font-family:Georgia,serif;
+  font-size:47px;
+  line-height:.94;
+  letter-spacing:-.04em;
 }
 
-.how .section-title{
-  color:#fff;
+.book-sub{
+  position:relative;
+  z-index:2;
+  margin-top:22px;
+  font-size:12px;
+  line-height:1.55;
+  color:#d9e0ea;
+  max-width:220px;
 }
 
-.steps{
+.book-bottom{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:38px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  z-index:2;
+}
+
+.book-author{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#cbd5e1;
+}
+
+.book-badge{
+  width:52px;
+  height:52px;
+  border:1px solid rgba(242,204,119,.7);
+  border-radius:50%;
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
+  place-items:center;
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:20px;
 }
 
-.step{
+.floating-page{
+  position:absolute;
+  z-index:3;
+  background:#fff;
+  border:1px solid #e7e1d6;
+  box-shadow:var(--shadow);
+  border-radius:9px;
+  padding:12px;
+}
+
+.page-one{
+  width:205px;
+  right:0;
+  top:70px;
+  transform:rotate(5deg);
+}
+
+.page-two{
+  width:190px;
+  left:0;
+  bottom:62px;
+  transform:rotate(-7deg);
+}
+
+.mini-page{
+  background:#fbfaf6;
+  border:1px solid #e8e2d7;
+  border-radius:5px;
+  padding:13px;
+}
+
+.mini-head{
+  font-family:Georgia,serif;
+  color:var(--ink);
+  font-size:15px;
+  margin-bottom:9px;
+}
+
+.line{
+  height:5px;
+  background:#dfe5eb;
+  border-radius:10px;
+  margin:6px 0;
+}
+
+.line.short{width:58%}
+.line.med{width:78%}
+
+.box-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+  margin-top:10px;
+}
+
+.mini-box{
+  height:35px;
+  border:1px solid #d9d3c8;
+  background:#fff;
+  border-radius:4px;
+}
+
+.circle-progress{
+  width:62px;
+  height:62px;
+  margin:5px auto 8px;
+  border-radius:50%;
+  border:7px solid #ead8a9;
+  border-right-color:var(--ink);
+}
+
+/* TRUST STRIP */
+.trust{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  padding:20px 0;
+}
+
+.trust-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 28px;
+  text-align:center;
+  color:#697586;
+  font-size:13px;
+}
+
+.trust strong{
+  color:var(--ink);
+}
+
+/* SECTION */
+.section{
+  padding:95px 0;
+}
+
+.section.alt{
+  background:var(--cream);
+}
+
+.section-head{
+  max-width:720px;
+  margin:0 auto 48px;
   text-align:center;
 }
 
-.stepn{
-  width:55px;
-  height:55px;
-  margin:0 auto 16px;
-  display:grid;
-  place-items:center;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  color:var(--gold2);
+.kicker{
+  color:#9a762b;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:11px;
   font-weight:900;
-  font-size:1.2rem;
+  margin-bottom:12px;
+}
+
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--ink);
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+  margin-bottom:15px;
+}
+
+.section-head p{
+  color:var(--muted);
+  font-size:16px;
+}
+
+/* FRAMEWORK */
+.framework{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+
+.step{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:25px 17px;
+  min-height:190px;
+  box-shadow:0 8px 24px rgba(12,29,58,.04);
+  position:relative;
+}
+
+.step-number{
+  font-family:Georgia,serif;
+  color:#c5a05a;
+  font-size:14px;
+}
+
+.step h3{
+  color:var(--ink);
+  font-family:Georgia,serif;
+  font-size:24px;
+  margin:13px 0 8px;
 }
 
 .step p{
-  color:#c4cede;
-  font-size:.9rem;
+  color:#6b7788;
+  font-size:13px;
+  line-height:1.6;
 }
 
-/* OFFER */
-
-.offer{
-  color:#fff;
-  background:
-  radial-gradient(circle at 15% 20%,rgba(213,167,76,.2),transparent 25%),
-  linear-gradient(135deg,#071426,#102852);
-}
-
-.offer-grid{
-  max-width:930px;
-  margin:auto;
+/* PREVIEW GALLERY */
+.gallery{
   display:grid;
-  grid-template-columns:1fr .9fr;
-  gap:50px;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.preview-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:13px;
+  box-shadow:var(--shadow2);
+  transition:.2s ease;
+}
+
+.preview-card:hover{
+  transform:translateY(-4px);
+}
+
+.preview-image{
+  min-height:270px;
+  background:#f8f5ee;
+  border-radius:9px;
+  padding:20px;
+  overflow:hidden;
+  position:relative;
+}
+
+.preview-card h3{
+  color:var(--ink);
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin:15px 6px 4px;
+}
+
+.preview-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin:0 6px 7px;
+}
+
+/* SVG-LIKE PAGE DESIGNS */
+.sheet{
+  background:#fff;
+  border:1px solid #ded8cc;
+  box-shadow:0 8px 18px rgba(12,29,58,.08);
+  height:100%;
+  min-height:230px;
+  padding:20px;
+  color:var(--ink);
+}
+
+.sheet-top{
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#a27e35;
+  font-weight:800;
+}
+
+.sheet h4{
+  font-family:Georgia,serif;
+  font-size:24px;
+  margin:10px 0 5px;
+}
+
+.sheet-note{
+  font-size:9px;
+  color:#718096;
+  margin-bottom:15px;
+}
+
+.audit-row{
+  display:grid;
+  grid-template-columns:1fr 40px;
+  align-items:center;
+  gap:8px;
+  margin:9px 0;
+}
+
+.audit-label{
+  font-size:9px;
+}
+
+.audit-bar{
+  height:6px;
+  background:#e9e5dc;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.audit-fill{
+  height:100%;
+  background:var(--gold);
+  border-radius:8px;
+}
+
+.audit-score{
+  width:30px;
+  height:22px;
+  border:1px solid #ddd6c8;
+  display:grid;
+  place-items:center;
+  font-size:8px;
+  background:#faf8f3;
+}
+
+.value-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:7px;
+  margin-top:14px;
+}
+
+.value{
+  padding:8px;
+  border:1px solid #ddd6c8;
+  border-radius:4px;
+  font-size:8px;
+  text-align:center;
+}
+
+.value.active{
+  background:#f8edce;
+  border-color:#d9b45f;
+}
+
+.decision{
+  display:grid;
+  grid-template-columns:1.5fr .5fr .5fr;
+  margin-top:14px;
+  border-top:1px solid #ddd6c8;
+}
+
+.decision div{
+  min-height:27px;
+  padding:7px 5px;
+  border-bottom:1px solid #ddd6c8;
+  border-right:1px solid #ddd6c8;
+  font-size:8px;
+}
+
+.blueprint{
+  margin-top:15px;
+  display:grid;
+  gap:8px;
+}
+
+.bp-row{
+  display:grid;
+  grid-template-columns:62px 1fr;
+  gap:8px;
   align-items:center;
 }
 
-.offer .section-title{
+.bp-row strong{
+  font-size:8px;
+  text-transform:uppercase;
+  color:#98732d;
+}
+
+.bp-line{
+  height:28px;
+  border:1px solid #ddd6c8;
+  border-radius:3px;
+}
+
+.habits{
+  display:grid;
+  grid-template-columns:1fr repeat(7,1fr);
+  margin-top:14px;
+  border-top:1px solid #ddd6c8;
+  border-left:1px solid #ddd6c8;
+}
+
+.habits div{
+  min-height:22px;
+  border-right:1px solid #ddd6c8;
+  border-bottom:1px solid #ddd6c8;
+  display:grid;
+  place-items:center;
+  font-size:7px;
+}
+
+.habits .mark{
+  color:var(--green);
+  font-size:11px;
+}
+
+/* WHAT YOU RECEIVE */
+.receive-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.receive-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:27px;
+}
+
+.receive-icon{
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  background:#f7edcf;
+  color:#94702c;
+  display:grid;
+  place-items:center;
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.receive-card h3{
+  color:var(--ink);
+  font-family:Georgia,serif;
+  font-size:23px;
+  margin-bottom:8px;
+}
+
+.receive-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.receive-list{
+  margin-top:16px;
+  display:grid;
+  gap:8px;
+  list-style:none;
+}
+
+.receive-list li{
+  font-size:13px;
+  display:flex;
+  gap:8px;
+}
+
+.receive-list li:before{
+  content:"✓";
+  color:var(--green);
+  font-weight:900;
+}
+
+/* 10 TOOL STRIP */
+.tools{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.tool{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px 12px;
+  text-align:center;
+}
+
+.tool span{
+  display:block;
+  font-family:Georgia,serif;
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:5px;
+}
+
+.tool b{
+  display:block;
+  color:var(--ink);
+  font-size:12px;
+}
+
+/* OFFER */
+.offer{
+  background:var(--ink);
+  color:#fff;
+  padding:95px 0;
+  position:relative;
+  overflow:hidden;
+}
+
+.offer:before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  border:1px solid rgba(242,204,119,.12);
+  right:-180px;
+  top:-170px;
+}
+
+.offer-inner{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+}
+
+.offer .kicker{
+  color:var(--gold2);
+}
+
+.offer h2{
   color:#fff;
 }
 
 .offer p{
-  color:#cdd6e4;
-}
-
-.price-card{
-  background:#fff;
-  color:var(--text);
-  border-radius:18px;
-  padding:34px;
-  box-shadow:0 25px 70px rgba(0,0,0,.35);
-  text-align:center;
-}
-
-.price-label{
-  color:#748093;
-  font-size:.76rem;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-weight:900;
+  color:#c8d1dd;
+  max-width:600px;
+  margin:0 auto 28px;
 }
 
 .price{
-  color:var(--navy);
-  font-size:4rem;
-  line-height:1;
-  font-weight:950;
-  letter-spacing:-.06em;
-  margin:10px 0 20px;
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:8px;
+  margin:22px 0;
 }
 
-.price-card ul{
-  list-style:none;
-  padding:0;
-  text-align:left;
-  margin:20px 0 25px;
+.price-symbol{
+  font-size:25px;
+  color:var(--gold2);
 }
 
-.price-card li{
-  padding:8px 0;
-  border-bottom:1px solid #edf0f3;
-  font-size:.88rem;
+.price-number{
+  font-size:65px;
+  font-family:Georgia,serif;
+  color:#fff;
+  letter-spacing:-.04em;
 }
 
-.price-card li:before{
-  content:"✓";
-  color:var(--green);
-  font-weight:900;
-  margin-right:9px;
+.price-label{
+  color:#b9c4d2;
+  font-size:13px;
 }
 
-.checkout-note{
-  color:#748093;
-  font-size:.76rem;
-  margin-top:14px;
+.offer .primary-btn{
+  background:var(--gold2);
+  color:var(--ink);
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.guarantee{
+  margin-top:15px;
+  color:#aeb9c8;
+  font-size:12px;
 }
 
 /* FAQ */
-
 .faq{
-  background:#fff;
-}
-
-.faq-list{
   max-width:800px;
   margin:auto;
+  display:grid;
+  gap:10px;
 }
 
 details{
-  border-bottom:1px solid var(--line);
-  padding:18px 4px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:18px 20px;
 }
 
 summary{
   cursor:pointer;
-  color:var(--navy);
+  color:var(--ink);
   font-weight:800;
+  list-style:none;
+  position:relative;
+  padding-right:25px;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary:after{
+  content:"+";
+  position:absolute;
+  right:0;
+  top:-2px;
+  color:var(--gold);
+  font-size:22px;
+}
+
+details[open] summary:after{
+  content:"−";
 }
 
 details p{
+  margin-top:12px;
   color:var(--muted);
-  font-size:.92rem;
-  margin:12px 0 2px;
-}
-
-/* FINAL */
-
-.final{
-  text-align:center;
-  background:var(--cream);
-}
-
-.final .section-title{
-  max-width:780px;
-  margin-left:auto;
-  margin-right:auto;
+  font-size:14px;
 }
 
 /* FOOTER */
-
 .footer{
-  background:#071426;
-  color:#9aa7ba;
+  background:#08162c;
+  color:#aeb9c8;
+  padding:35px 0 90px;
   text-align:center;
-  padding:30px;
-  font-size:.76rem;
 }
 
-/* MOBILE */
+.footer-logo{
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:22px;
+  margin-bottom:8px;
+}
 
+.footer p{
+  font-size:12px;
+}
+
+/* STICKY CTA */
 .sticky{
   display:none;
+  position:fixed;
+  z-index:120;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:10px 12px;
+  background:rgba(8,22,44,.96);
+  box-shadow:0 -8px 30px rgba(0,0,0,.16);
+}
+
+.sticky a{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px;
+  border-radius:9px;
+  background:var(--gold2);
+  color:var(--ink);
+  font-weight:900;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .hero{
+    padding:55px 0 60px;
+  }
+
+  .hero-visual{
+    min-height:520px;
+  }
+
+  .framework{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .tools{
+    grid-template-columns:repeat(3,1fr);
+  }
 }
 
 @media(max-width:780px){
 
-  .wrap{
-    width:min(100% - 28px,600px);
+  .container{
+    width:min(100% - 28px,1120px);
   }
 
-  .navin{
-    height:62px;
+  .nav-inner{
+    min-height:62px;
   }
 
-  .nav .btn{
-    padding:9px 12px;
-    font-size:.74rem;
+  .logo small{
+    display:none;
   }
 
-  .hero{
-    padding:55px 0 65px;
+  .nav-cta{
+    padding:9px 13px;
+    font-size:11px;
   }
 
-  .hero-grid,
-  .included-grid,
-  .offer-grid{
-    grid-template-columns:1fr;
-    gap:35px;
+  h1{
+    font-size:43px;
   }
 
-  .hero h1{
-    font-size:2.65rem;
+  .hero-lead{
+    font-size:16px;
   }
 
-  .product-scene{
-    min-height:450px;
+  .hero-actions{
+    display:block;
+  }
+
+  .primary-btn{
+    width:100%;
+  }
+
+  .hero-visual{
+    min-height:460px;
   }
 
   .book{
-    width:275px;
-    min-height:390px;
+    width:280px;
   }
 
-  .floating-card{
-    right:5px;
-    bottom:15px;
+  .book-cover{
+    padding:28px 25px;
   }
 
-  .trustin{
-    grid-template-columns:1fr 1fr;
-    font-size:.74rem;
+  .book-title{
+    margin-top:70px;
+    font-size:36px;
   }
 
-  section{
-    padding:64px 0;
+  .book-bottom{
+    left:25px;
+    right:25px;
+    bottom:28px;
   }
 
-  .problem-grid,
-  .benefit-grid,
-  .steps{
+  .page-one{
+    width:150px;
+    right:-4px;
+    top:25px;
+  }
+
+  .page-two{
+    width:145px;
+    left:-3px;
+    bottom:25px;
+  }
+
+  .section{
+    padding:65px 0;
+  }
+
+  .framework{
     grid-template-columns:1fr;
   }
 
-  .framework-grid{
-    grid-template-columns:1fr 1fr;
+  .step{
+    min-height:auto;
   }
 
-  .framework-card:last-child{
-    grid-column:1 / -1;
+  .gallery{
+    grid-template-columns:1fr;
   }
 
-  .price-card{
-    padding:28px 22px;
+  .receive-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tools{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .offer{
+    padding:70px 0;
+  }
+
+  .price-number{
+    font-size:55px;
   }
 
   .sticky{
-    display:flex;
-    position:fixed;
-    z-index:100;
-    bottom:12px;
-    left:12px;
-    right:12px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-  }
-
-  .sticky .btn{
-    width:100%;
-    padding:15px;
+    display:block;
   }
 
   .footer{
@@ -849,29 +1121,30 @@ details p{
 
 <body>
 
+<!-- NAV -->
 <header class="nav">
-  <div class="wrap navin">
+  <div class="container nav-inner">
 
-    <a href="#top" class="brand">
-      KNOW YOURSELF
-      <small>From Lost to Life Blueprint</small>
+    <a href="#" class="logo">
+      <span class="logo-mark">K</span>
+      <span>
+        KNOW YOURSELF
+        <small>From Lost to Life Blueprint</small>
+      </span>
     </a>
 
-    <a href="#offer" class="btn">
-      Get Instant Access — $27
+    <a class="nav-cta"
+       href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1">
+      Get the Workbook — $27
     </a>
 
   </div>
 </header>
 
 
-<main id="top">
-
 <!-- HERO -->
-
 <section class="hero">
-
-  <div class="wrap hero-grid">
+  <div class="container hero-grid">
 
     <div>
 
@@ -881,644 +1154,861 @@ details p{
 
       <h1>
         Feel Less Lost.<br>
-        Get Clear on <span>What Matters.</span>
+        Get Clear on What Matters.
       </h1>
 
-      <p class="lead">
-        A guided self-discovery workbook to help you understand where you are,
-        clarify what matters to you, make better decisions, and build a practical
-        plan for your next 90 days.
+      <p class="hero-lead">
+        A guided self-discovery workbook to help you understand where
+        you are, clarify what matters to you, make better decisions,
+        and build a practical plan for your next 90 days.
       </p>
 
-      <ul class="checklist">
-        <li>Audit your life across 8 core areas</li>
-        <li>Clarify your values, strengths, and priorities</li>
-        <li>Use practical tools to compare important decisions</li>
-        <li>Create your personal Life Blueprint and 90-day action plan</li>
+      <ul class="check-list">
+        <li>
+          <span class="check">✓</span>
+          <span>Reflect on your current life across 8 important areas.</span>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <span>Discover your core values, strengths, and personal priorities.</span>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <span>Use practical tools to compare options and make clearer decisions.</span>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <span>Create a personal Life Blueprint and a practical 90-day action plan.</span>
+        </li>
       </ul>
 
-      <a href="#offer" class="btn">
-        Get the Complete Workbook — $27 →
-      </a>
+      <div class="hero-actions">
+        <a class="primary-btn"
+           href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1">
+          Get the Complete Workbook — $27
+          <span>→</span>
+        </a>
+      </div>
 
-      <p class="micro">
+      <div class="micro">
         Instant digital access · Printable + digital PDF
-      </p>
+      </div>
 
     </div>
 
 
-    <div class="product-scene">
+    <!-- PRODUCT VISUAL -->
+    <div class="hero-visual">
 
+      <div class="glow"></div>
+
+      <!-- Preview page -->
+      <div class="floating-page page-one">
+        <div class="mini-page">
+          <div class="mini-head">Life Audit</div>
+
+          <div class="line"></div>
+          <div class="line med"></div>
+
+          <div class="audit-row">
+            <div class="audit-label">Health</div>
+            <div class="audit-score">7</div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-label">Career</div>
+            <div class="audit-score">5</div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-label">Relationships</div>
+            <div class="audit-score">8</div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-label">Finances</div>
+            <div class="audit-score">6</div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-label">Personal Growth</div>
+            <div class="audit-score">7</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Workbook cover -->
       <div class="book">
 
-        <div class="book-top">
-          Guided Self-Discovery Workbook
-        </div>
+        <div class="book-cover">
 
-        <h2>
-          KNOW<br>
-          <span>YOURSELF</span>
-        </h2>
+          <div class="book-top">
+            Guided Self-Discovery Workbook
+          </div>
 
-        <p>
-          From Lost to Life Blueprint
-        </p>
+          <div class="book-title">
+            KNOW<br>
+            YOURSELF
+          </div>
 
-        <div class="book-line"></div>
+          <div class="book-sub">
+            From Lost to Life Blueprint
+          </div>
 
-        <div class="book-footer">
-          Clarity · Direction · Action
+          <div class="book-bottom">
+            <div class="book-author">
+              A practical clarity & life-planning workbook
+            </div>
+
+            <div class="book-badge">
+              K
+            </div>
+          </div>
+
         </div>
 
       </div>
 
-      <div class="floating-card">
-        11 Chapters
-        <span>Practical exercises & tools</span>
+
+      <!-- Second preview -->
+      <div class="floating-page page-two">
+        <div class="mini-page">
+
+          <div class="mini-head">
+            90-Day Action Plan
+          </div>
+
+          <div class="line"></div>
+          <div class="line short"></div>
+
+          <div class="box-grid">
+            <div class="mini-box"></div>
+            <div class="mini-box"></div>
+            <div class="mini-box"></div>
+            <div class="mini-box"></div>
+          </div>
+
+          <div class="circle-progress"></div>
+
+        </div>
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 
 <!-- TRUST -->
-
 <section class="trust">
-
-  <div class="wrap trustin">
-
-    <div><b>✓</b> 11 Chapters</div>
-    <div><b>✓</b> Practical Workbook</div>
-    <div><b>✓</b> Decision Tools</div>
-    <div><b>✓</b> 90-Day Plan</div>
-
+  <div class="container trust-inner">
+    <span><strong>11 chapters</strong> of guided reflection</span>
+    <span>•</span>
+    <span><strong>Practical workbook</strong> exercises</span>
+    <span>•</span>
+    <span><strong>Decision tools</strong></span>
+    <span>•</span>
+    <span><strong>90-day plan</strong></span>
   </div>
-
-</section>
-
-
-<!-- PROBLEM -->
-
-<section class="problem">
-
-  <div class="wrap">
-
-    <div class="center">
-
-      <div class="eyebrow">
-        When clarity feels difficult
-      </div>
-
-      <h2 class="section-title">
-        Sometimes the problem isn't motivation.
-        <span class="gold">It's direction.</span>
-      </h2>
-
-      <p class="subtitle">
-        When everything feels important, it becomes difficult to know
-        what deserves your attention first.
-      </p>
-
-    </div>
-
-
-    <div class="problem-grid">
-
-      <article class="pain">
-        <strong>You have too many possibilities</strong>
-        <p>
-          Different goals, responsibilities and ideas can make it difficult
-          to decide which direction actually fits you.
-        </p>
-      </article>
-
-      <article class="pain">
-        <strong>You know you want change</strong>
-        <p>
-          But knowing that something needs to change is different from
-          knowing what to change and where to begin.
-        </p>
-      </article>
-
-      <article class="pain">
-        <strong>You need a practical system</strong>
-        <p>
-          Reflection becomes more useful when it leads to decisions,
-          habits and specific next actions.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-
 </section>
 
 
 <!-- FRAMEWORK -->
+<section class="section">
+  <div class="container">
 
-<section class="framework">
+    <div class="section-head">
+      <div class="kicker">The framework</div>
 
-  <div class="wrap">
-
-    <div class="center">
-
-      <div class="eyebrow">
-        The five-part framework
-      </div>
-
-      <h2 class="section-title">
-        From reflection to <span class="gold">action.</span>
+      <h2>
+        A structured path from reflection to action.
       </h2>
 
-      <p class="subtitle">
-        The workbook moves through five connected stages designed
-        to help you understand yourself and turn that understanding
-        into a practical plan.
+      <p>
+        The workbook is organized around five stages so you can move
+        from understanding yourself to creating a practical direction.
       </p>
-
     </div>
 
 
-    <div class="framework-grid">
+    <div class="framework">
 
-      <div class="framework-card">
-        <b>AWAKEN</b>
-        <span>Understand where you are</span>
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>AWAKEN</h3>
+        <p>
+          Step back and examine where you currently are and what may
+          be influencing your choices.
+        </p>
       </div>
 
-      <div class="framework-card">
-        <b>DISCOVER</b>
-        <span>Understand what matters</span>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>DISCOVER</h3>
+        <p>
+          Explore your values, strengths, priorities, identity and
+          the things that matter to you.
+        </p>
       </div>
 
-      <div class="framework-card">
-        <b>DESIGN</b>
-        <span>Choose your direction</span>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>DESIGN</h3>
+        <p>
+          Compare possible directions and turn your reflections into
+          a clearer personal blueprint.
+        </p>
       </div>
 
-      <div class="framework-card">
-        <b>TRANSFORM</b>
-        <span>Build practical systems</span>
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>TRANSFORM</h3>
+        <p>
+          Translate clarity into routines, habits, decisions and
+          practical next steps.
+        </p>
       </div>
 
-      <div class="framework-card">
-        <b>BECOME</b>
-        <span>Keep moving forward</span>
+      <div class="step">
+        <div class="step-number">05</div>
+        <h3>BECOME</h3>
+        <p>
+          Build a sustainable system for reviewing your progress and
+          continuing to move forward.
+        </p>
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 
-<!-- BENEFITS -->
+<!-- PRODUCT PREVIEWS -->
+<section class="section alt" id="preview">
+  <div class="container">
 
-<section class="benefits">
+    <div class="section-head">
+      <div class="kicker">Inside the workbook</div>
 
-  <div class="wrap">
-
-    <div class="center">
-
-      <div class="eyebrow">
-        What you will work on
-      </div>
-
-      <h2 class="section-title">
-        More than reading.
-        <span class="gold">You actually work through it.</span>
+      <h2>
+        See the tools you'll actually use.
       </h2>
 
+      <p>
+        These visual previews represent the practical exercises and
+        planning pages included in the workbook.
+      </p>
     </div>
 
 
-    <div class="benefit-grid">
+    <div class="gallery">
 
-      <article class="benefit">
-        <div class="icon">◎</div>
+      <!-- LIFE AUDIT -->
+      <div class="preview-card">
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Know Yourself · Chapter 1
+            </div>
+
+            <h4>Life Audit</h4>
+
+            <div class="sheet-note">
+              Take an honest look at where you are today.
+            </div>
+
+            <div class="audit-row">
+              <div>
+                <div class="audit-label">Health & Energy</div>
+                <div class="audit-bar">
+                  <div class="audit-fill" style="width:72%"></div>
+                </div>
+              </div>
+              <div class="audit-score">7/10</div>
+            </div>
+
+            <div class="audit-row">
+              <div>
+                <div class="audit-label">Career & Work</div>
+                <div class="audit-bar">
+                  <div class="audit-fill" style="width:54%"></div>
+                </div>
+              </div>
+              <div class="audit-score">5/10</div>
+            </div>
+
+            <div class="audit-row">
+              <div>
+                <div class="audit-label">Relationships</div>
+                <div class="audit-bar">
+                  <div class="audit-fill" style="width:81%"></div>
+                </div>
+              </div>
+              <div class="audit-score">8/10</div>
+            </div>
+
+            <div class="audit-row">
+              <div>
+                <div class="audit-label">Finances</div>
+                <div class="audit-bar">
+                  <div class="audit-fill" style="width:61%"></div>
+                </div>
+              </div>
+              <div class="audit-score">6/10</div>
+            </div>
+
+            <div class="audit-row">
+              <div>
+                <div class="audit-label">Personal Growth</div>
+                <div class="audit-bar">
+                  <div class="audit-fill" style="width:74%"></div>
+                </div>
+              </div>
+              <div class="audit-score">7/10</div>
+            </div>
+
+          </div>
+
+        </div>
+
         <h3>Life Audit</h3>
         <p>
-          Review eight important areas of your current life and identify
-          where your attention may be most useful.
+          Review the major areas of your life and identify where
+          attention may be needed.
         </p>
-      </article>
+      </div>
 
-      <article class="benefit">
-        <div class="icon">◆</div>
+
+      <!-- VALUES -->
+      <div class="preview-card">
+
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Discover
+            </div>
+
+            <h4>Core Values</h4>
+
+            <div class="sheet-note">
+              What principles do you want your life to reflect?
+            </div>
+
+            <div class="value-list">
+              <div class="value active">Freedom</div>
+              <div class="value">Growth</div>
+              <div class="value active">Family</div>
+              <div class="value">Security</div>
+              <div class="value">Creativity</div>
+              <div class="value active">Integrity</div>
+              <div class="value">Adventure</div>
+              <div class="value">Contribution</div>
+              <div class="value">Learning</div>
+              <div class="value">Balance</div>
+            </div>
+
+          </div>
+
+        </div>
+
         <h3>Core Values</h3>
         <p>
-          Explore the principles and priorities that can help you make
-          decisions that feel more aligned with you.
+          Identify the principles and priorities that can guide your
+          decisions.
         </p>
-      </article>
 
-      <article class="benefit">
-        <div class="icon">✦</div>
-        <h3>Strengths Map</h3>
-        <p>
-          Identify strengths, capabilities and personal qualities that
-          may be easy to overlook.
-        </p>
-      </article>
+      </div>
 
-      <article class="benefit">
-        <div class="icon">◇</div>
+
+      <!-- DECISION MATRIX -->
+      <div class="preview-card">
+
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Design
+            </div>
+
+            <h4>Decision Matrix</h4>
+
+            <div class="sheet-note">
+              Compare options using criteria that matter to you.
+            </div>
+
+            <div class="decision">
+
+              <div><b>Option</b></div>
+              <div><b>Fit</b></div>
+              <div><b>Score</b></div>
+
+              <div>Path A</div>
+              <div>High</div>
+              <div>8.4</div>
+
+              <div>Path B</div>
+              <div>Medium</div>
+              <div>6.9</div>
+
+              <div>Path C</div>
+              <div>High</div>
+              <div>8.1</div>
+
+              <div>Path D</div>
+              <div>Low</div>
+              <div>5.7</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
         <h3>Decision Matrix</h3>
         <p>
-          Compare important options using a structured framework instead
-          of relying only on the moment.
+          Turn confusing choices into a structured comparison based
+          on your own priorities.
         </p>
-      </article>
 
-      <article class="benefit">
-        <div class="icon">↗</div>
-        <h3>Life Blueprint</h3>
+      </div>
+
+
+      <!-- BLUEPRINT -->
+      <div class="preview-card">
+
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Design Your Direction
+            </div>
+
+            <h4>Life Blueprint</h4>
+
+            <div class="sheet-note">
+              Describe the direction you want to build.
+            </div>
+
+            <div class="blueprint">
+
+              <div class="bp-row">
+                <strong>1 Year</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>3 Years</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>5 Years</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Priorities</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Next Step</strong>
+                <div class="bp-line"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <h3>Personal Life Blueprint</h3>
         <p>
-          Translate your reflection into a clearer 1-, 3-, and 5-year
-          direction.
+          Connect your priorities with a clearer picture of where you
+          want to go.
         </p>
-      </article>
 
-      <article class="benefit">
-        <div class="icon">90</div>
+      </div>
+
+
+      <!-- HABIT TRACKER -->
+      <div class="preview-card">
+
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Transform
+            </div>
+
+            <h4>Habit Tracker</h4>
+
+            <div class="sheet-note">
+              Make your intentions easier to turn into repeated action.
+            </div>
+
+            <div class="habits">
+
+              <div></div>
+              <div>M</div>
+              <div>T</div>
+              <div>W</div>
+              <div>T</div>
+              <div>F</div>
+              <div>S</div>
+              <div>S</div>
+
+              <div>Morning</div>
+              <div class="mark">✓</div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div></div>
+
+              <div>Reading</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+
+              <div>Exercise</div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div class="mark">✓</div>
+              <div></div>
+              <div class="mark">✓</div>
+              <div></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <h3>Habit Tracker</h3>
+        <p>
+          Keep your daily actions visible and easier to review.
+        </p>
+
+      </div>
+
+
+      <!-- 90 DAY PLAN -->
+      <div class="preview-card">
+
+        <div class="preview-image">
+
+          <div class="sheet">
+
+            <div class="sheet-top">
+              Become
+            </div>
+
+            <h4>90-Day Action Plan</h4>
+
+            <div class="sheet-note">
+              Turn your reflections into practical next steps.
+            </div>
+
+            <div class="blueprint">
+
+              <div class="bp-row">
+                <strong>Goal 1</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Goal 2</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Week 1</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Week 4</strong>
+                <div class="bp-line"></div>
+              </div>
+
+              <div class="bp-row">
+                <strong>Week 12</strong>
+                <div class="bp-line"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
         <h3>90-Day Action Plan</h3>
         <p>
-          Turn your priorities into practical actions, routines,
-          milestones and reviews.
+          Define practical priorities and steps for the next three
+          months.
         </p>
-      </article>
+
+      </div>
 
     </div>
 
   </div>
-
 </section>
 
 
-<!-- INCLUDED -->
+<!-- WHAT YOU RECEIVE -->
+<section class="section">
+  <div class="container">
 
-<section class="included">
+    <div class="section-head">
+      <div class="kicker">What you receive</div>
 
-  <div class="wrap included-grid">
+      <h2>
+        More than something to read.
+      </h2>
 
-    <div class="preview">
+      <p>
+        This is designed to be written in, revisited, and used as a
+        personal planning system.
+      </p>
+    </div>
 
-      <div class="preview-page">
 
-        <div class="eyebrow">
-          Example worksheet
-        </div>
+    <div class="receive-grid">
+
+      <div class="receive-card">
+
+        <div class="receive-icon">01</div>
 
         <h3>
-          Life Audit
+          Guided workbook
         </h3>
 
-        <p style="color:#687386;font-size:.86rem;">
-          Rate your current level of satisfaction and identify
-          the areas that deserve your attention.
+        <p>
+          A structured sequence of reflection exercises designed to
+          help you examine your current situation and clarify what
+          matters.
         </p>
 
-        <div class="audit-row">
-          <div class="audit-label">Career</div>
-          <div class="audit-bar"><span style="width:55%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Health</div>
-          <div class="audit-bar"><span style="width:70%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Relationships</div>
-          <div class="audit-bar"><span style="width:48%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Finances</div>
-          <div class="audit-bar"><span style="width:42%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Personal Growth</div>
-          <div class="audit-bar"><span style="width:75%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Lifestyle</div>
-          <div class="audit-bar"><span style="width:60%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Family</div>
-          <div class="audit-bar"><span style="width:68%"></span></div>
-        </div>
-
-        <div class="audit-row">
-          <div class="audit-label">Purpose</div>
-          <div class="audit-bar"><span style="width:45%"></span></div>
-        </div>
+        <ul class="receive-list">
+          <li>11 guided chapters</li>
+          <li>Practical reflection questions</li>
+          <li>Life Audit across 8 areas</li>
+          <li>Personal Identity Card</li>
+        </ul>
 
       </div>
 
-    </div>
 
+      <div class="receive-card">
 
-    <div>
+        <div class="receive-icon">02</div>
 
-      <div class="eyebrow">
-        Inside the complete workbook
+        <h3>
+          Practical decision tools
+        </h3>
+
+        <p>
+          Use structured exercises to turn thoughts and observations
+          into clearer choices and priorities.
+        </p>
+
+        <ul class="receive-list">
+          <li>Core Values exercises</li>
+          <li>Strengths Map</li>
+          <li>Three Life Paths</li>
+          <li>Decision Matrix</li>
+        </ul>
+
       </div>
 
-      <h2 class="section-title">
-        A structured path from
-        <span class="gold">insight to action.</span>
-      </h2>
 
-      <p class="subtitle">
-        Work through the system at your own pace. The goal isn't to
-        rush through the pages — it's to use them to understand,
-        decide and act.
-      </p>
+      <div class="receive-card">
+
+        <div class="receive-icon">03</div>
+
+        <h3>
+          Personal planning system
+        </h3>
+
+        <p>
+          Bring everything together into a direction that you can
+          revisit and adjust over time.
+        </p>
+
+        <ul class="receive-list">
+          <li>Personal Life Blueprint</li>
+          <li>Daily Routine</li>
+          <li>Habit Tracker</li>
+          <li>90-Day Action Plan</li>
+        </ul>
+
+      </div>
 
 
-      <ol class="content-list">
+      <div class="receive-card">
 
-        <li>
-          <span class="num">01</span>
-          <div>
-            <b>Diagnose Your Current Reality</b>
-            <span>Life Audit, eight core areas and baseline questions.</span>
-          </div>
-        </li>
+        <div class="receive-icon">04</div>
 
-        <li>
-          <span class="num">02</span>
-          <div>
-            <b>Discover Your Identity</b>
-            <span>Values, strengths, emotional intelligence and identity exercises.</span>
-          </div>
-        </li>
+        <h3>
+          Life Reset Toolkit
+        </h3>
 
-        <li>
-          <span class="num">03</span>
-          <div>
-            <b>Design Your Direction</b>
-            <span>Three Life Paths, Decision Matrix and Life Blueprint.</span>
-          </div>
-        </li>
+        <p>
+          A collection of practical tools to help you review your
+          progress, identify obstacles, and stay accountable.
+        </p>
 
-        <li>
-          <span class="num">04</span>
-          <div>
-            <b>Build Your Execution System</b>
-            <span>Daily routine, habits, trackers and a 90-day action plan.</span>
-          </div>
-        </li>
+        <ul class="receive-list">
+          <li>Anti-Procrastination Reset</li>
+          <li>Obstacle Map</li>
+          <li>Accountability System</li>
+          <li>Commitment Pledge</li>
+        </ul>
 
-        <li>
-          <span class="num">05</span>
-          <div>
-            <b>Stay Consistent</b>
-            <span>Obstacle Map, accountability system and review pages.</span>
-          </div>
-        </li>
-
-      </ol>
+      </div>
 
     </div>
 
   </div>
-
 </section>
 
 
-<!-- COMPARISON -->
+<!-- 10 TOOLS -->
+<section class="section alt">
+  <div class="container">
 
-<section class="compare">
+    <div class="section-head">
 
-  <div class="wrap">
-
-    <div class="center">
-
-      <div class="eyebrow">
-        A different reading experience
+      <div class="kicker">
+        Life Reset Toolkit
       </div>
 
-      <h2 class="section-title">
-        Designed to be
-        <span class="gold">used.</span>
+      <h2>
+        Practical tools for the moments when you feel stuck.
       </h2>
 
-    </div>
-
-
-    <div class="table-wrap">
-
-      <table>
-
-        <thead>
-          <tr>
-            <th>Traditional self-help reading</th>
-            <th>Know Yourself Workbook</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Mostly reading and reflection</td>
-            <td>✓ Guided exercises and worksheets</td>
-          </tr>
-
-          <tr>
-            <td>Broad goal-setting advice</td>
-            <td>✓ Decision tools and Life Blueprint</td>
-          </tr>
-
-          <tr>
-            <td>Ideas you may forget after reading</td>
-            <td>✓ Personal notes, trackers and review pages</td>
-          </tr>
-
-          <tr>
-            <td>Goals without a clear execution structure</td>
-            <td>✓ Practical 90-day action plan</td>
-          </tr>
-
-          <tr>
-            <td>Little structure for reviewing progress</td>
-            <td>✓ Weekly and monthly review system</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- HOW -->
-
-<section class="how">
-
-  <div class="wrap">
-
-    <div class="center">
-
-      <div class="eyebrow">
-        Simple to use
-      </div>
-
-      <h2 class="section-title">
-        Start with clarity.
-        Continue with action.
-      </h2>
-
-      <p class="subtitle" style="color:#c4cede;">
-        You don't need to complete everything in one sitting.
-        Work through the pages honestly and move forward one step at a time.
+      <p>
+        Use them individually when needed or as part of the complete
+        workbook journey.
       </p>
 
     </div>
 
 
-    <div class="steps">
+    <div class="tools">
 
-      <article class="step">
+      <div class="tool">
+        <span>01</span>
+        <b>Life Audit</b>
+      </div>
 
-        <div class="stepn">1</div>
+      <div class="tool">
+        <span>02</span>
+        <b>Values Filter</b>
+      </div>
 
-        <h3>Get the workbook</h3>
+      <div class="tool">
+        <span>03</span>
+        <b>Strengths Map</b>
+      </div>
 
-        <p>
-          Complete checkout and receive the digital PDF through the
-          delivery system.
-        </p>
+      <div class="tool">
+        <span>04</span>
+        <b>Decision Matrix</b>
+      </div>
 
-      </article>
+      <div class="tool">
+        <span>05</span>
+        <b>Life Blueprint</b>
+      </div>
 
+      <div class="tool">
+        <span>06</span>
+        <b>Habit Tracker</b>
+      </div>
 
-      <article class="step">
+      <div class="tool">
+        <span>07</span>
+        <b>90-Day Plan</b>
+      </div>
 
-        <div class="stepn">2</div>
+      <div class="tool">
+        <span>08</span>
+        <b>Obstacle Map</b>
+      </div>
 
-        <h3>Work through the exercises</h3>
+      <div class="tool">
+        <span>09</span>
+        <b>Accountability System</b>
+      </div>
 
-        <p>
-          Explore your current reality, values, strengths, decisions
-          and direction.
-        </p>
-
-      </article>
-
-
-      <article class="step">
-
-        <div class="stepn">3</div>
-
-        <h3>Build your next 90 days</h3>
-
-        <p>
-          Use your Life Blueprint, habits and action plan to begin
-          turning clarity into consistent action.
-        </p>
-
-      </article>
+      <div class="tool">
+        <span>10</span>
+        <b>Reset Toolkit</b>
+      </div>
 
     </div>
 
   </div>
-
 </section>
 
 
 <!-- OFFER -->
+<section class="offer" id="buy">
 
-<section class="offer" id="offer">
+  <div class="container">
 
-  <div class="wrap offer-grid">
+    <div class="offer-inner">
 
-    <div>
-
-      <div class="eyebrow">
-        Complete digital workbook
+      <div class="kicker">
+        Start your clarity journey
       </div>
 
-      <h2 class="section-title">
-        Get the complete
-        <span class="gold">Know Yourself</span>
-        system.
+      <h2>
+        Stop collecting more advice.<br>
+        Start working through your own answers.
       </h2>
 
       <p>
-        One complete guided workbook containing the exercises,
-        frameworks and planning tools you need to move from
-        self-reflection toward a clearer personal direction.
+        Get the complete Know Yourself workbook and use its guided
+        exercises, decision tools, planning pages, and 90-day system
+        at your own pace.
       </p>
-
-      <p style="font-size:.78rem;color:#9eabc0;">
-        Educational and personal-development content only.
-        This product is not a replacement for professional
-        mental-health, financial, legal or career support.
-      </p>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="price-label">
-        Complete Digital Workbook
-      </div>
 
       <div class="price">
-        $27
+        <span class="price-symbol">$</span>
+        <span class="price-number">27</span>
+        <span class="price-label">one-time</span>
       </div>
 
-      <ul>
-
-        <li>Complete Know Yourself workbook</li>
-
-        <li>Life Audit and values exercises</li>
-
-        <li>Strengths Map and identity exercises</li>
-
-        <li>Decision Matrix and Life Blueprint</li>
-
-        <li>Habit system and 90-day action plan</li>
-
-        <li>Weekly and monthly review tools</li>
-
-        <li>Life Reset Toolkit</li>
-
-      </ul>
-
-
-      <!-- PAYHIP CHECKOUT -->
-
-      <a
-        href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1"
-        class="btn"
-        style="width:100%;"
-        target="_blank"
-        rel="noopener"
-      >
-        Get Instant Access — $27 →
+      <a class="primary-btn"
+         href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1">
+        Get the Complete Workbook →
       </a>
 
-      <p class="checkout-note">
-        Secure Payhip checkout · Digital PDF delivery
-      </p>
+      <div class="guarantee">
+        Secure checkout · PayPal & card payment options available at checkout
+      </div>
 
     </div>
 
@@ -1528,81 +2018,100 @@ details p{
 
 
 <!-- FAQ -->
+<section class="section">
 
-<section class="faq">
+  <div class="container">
 
-  <div class="wrap">
+    <div class="section-head">
 
-    <div class="center">
-
-      <div class="eyebrow">
-        Before you decide
+      <div class="kicker">
+        Questions
       </div>
 
-      <h2 class="section-title">
-        Frequently asked questions
+      <h2>
+        Before you begin.
       </h2>
 
     </div>
 
 
-    <div class="faq-list">
+    <div class="faq">
 
       <details>
-        <summary>Is this a book or a workbook?</summary>
+        <summary>
+          Is this a book or a workbook?
+        </summary>
+
         <p>
-          It is a guided self-discovery workbook. It includes explanations,
-          but its main value comes from the exercises, worksheets,
-          decision tools and planning pages you complete.
+          It is designed as a guided self-discovery workbook. It
+          combines explanatory material with practical exercises,
+          reflection pages, decision tools, and planning worksheets.
         </p>
       </details>
 
 
       <details>
-        <summary>Who is this designed for?</summary>
+        <summary>
+          Who is it for?
+        </summary>
+
         <p>
-          It is designed for adults who feel uncertain about their direction,
-          want to understand their values and strengths better, or want
-          a practical structure for moving from reflection to action.
+          It is intended for people who want to better understand
+          their current situation, clarify their priorities, explore
+          possible directions, and turn their reflections into a
+          practical plan.
         </p>
       </details>
 
 
       <details>
-        <summary>How long does it take to complete?</summary>
+        <summary>
+          Do I need to complete everything at once?
+        </summary>
+
         <p>
-          You can work through the discovery sections in several focused
-          sessions. The execution portion is designed to support your
-          next 90 days through practical planning and review.
+          No. You can work through the material at your own pace.
+          You can also return to individual exercises whenever you
+          need to review your direction or priorities.
         </p>
       </details>
 
 
       <details>
-        <summary>What format will I receive?</summary>
+        <summary>
+          What will I receive after purchase?
+        </summary>
+
         <p>
-          You receive a digital PDF that can be read on a phone, tablet
-          or computer, or printed for handwritten use.
+          The product is delivered digitally through the checkout
+          and download process. You can read and use the PDF on
+          compatible devices and print pages when useful.
         </p>
       </details>
 
 
       <details>
-        <summary>Can I work through it at my own pace?</summary>
+        <summary>
+          How does the 90-day plan work?
+        </summary>
+
         <p>
-          Yes. There is no requirement to finish the workbook in one sitting.
-          Move through the exercises at a pace that allows you to think
-          carefully about your answers.
+          The workbook helps you translate your reflections into
+          practical priorities, habits, and next steps that you can
+          review over a three-month period.
         </p>
       </details>
 
 
       <details>
-        <summary>Is this therapy or professional advice?</summary>
+        <summary>
+          How do I pay?
+        </summary>
+
         <p>
-          No. Know Yourself is an educational personal-development resource.
-          It does not replace professional mental-health care, financial
-          advice or career counseling.
+          The checkout is handled by Payhip. Depending on the
+          available payment methods for your location, the checkout
+          can provide PayPal and card payment options.
         </p>
       </details>
 
@@ -1614,58 +2123,72 @@ details p{
 
 
 <!-- FINAL CTA -->
+<section class="section alt">
 
-<section class="final">
+  <div class="container">
 
-  <div class="wrap">
+    <div class="section-head">
 
-    <div class="eyebrow">
-      Your next step
+      <div class="kicker">
+        Your next chapter starts with clarity
+      </div>
+
+      <h2>
+        Understand yourself.<br>
+        Choose your direction.<br>
+        Build your plan.
+      </h2>
+
+      <p>
+        Use the workbook as a practical space to slow down, reflect,
+        decide, and take your next steps.
+      </p>
+
+      <br>
+
+      <a class="primary-btn"
+         href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1">
+        Get Know Yourself — $27 →
+      </a>
+
     </div>
-
-    <h2 class="section-title">
-      You don't need perfect clarity.
-      You need a clearer starting point.
-    </h2>
-
-    <p class="subtitle" style="max-width:650px;margin:0 auto 26px;">
-      Use Know Yourself to understand where you are,
-      clarify what matters and build a practical plan
-      for the next 90 days.
-    </p>
-
-    <a href="#offer" class="btn">
-      Get Know Yourself — $27 →
-    </a>
-
-    <p class="micro" style="color:#687386;">
-      Instant digital access · Printable + digital PDF
-    </p>
 
   </div>
 
 </section>
 
-</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-logo">
+      KNOW YOURSELF
+    </div>
+
+    <p>
+      From Lost to Life Blueprint
+    </p>
+
+    <p style="margin-top:10px;">
+      © 2026 Know Yourself. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
 
 
 <!-- MOBILE STICKY CTA -->
-
 <div class="sticky">
-  <a
-    href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1"
-    class="btn"
-    target="_blank"
-    rel="noopener"
-  >
-    Get Know Yourself — $27 →
+
+  <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=dCxn2&qty%5BdCxn2%5D=1">
+    Get the Complete Workbook — $27 →
   </a>
+
 </div>
 
-
-<footer class="footer">
-  © 2026 Know Yourself. All rights reserved.
-</footer>
 
 </body>
 </html>
